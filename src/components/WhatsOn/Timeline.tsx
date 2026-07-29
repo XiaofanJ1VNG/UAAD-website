@@ -79,8 +79,16 @@ export default function Timeline() {
             taller, the whole row re-aligns to the bottom and the
             connecting line breaks out of position for every other stop. */}
         {/* No gap here on purpose — each stop's own slot already includes
-            trailing spacing, so the connecting line stays unbroken. */}
-        <div className="flex select-none items-start">
+            trailing spacing, so the connecting line stays unbroken.
+            justify-center centers the whole line as a unit: when it's
+            narrower than the viewport it sits in the middle instead of
+            hugging the left edge; once it's wider than the viewport (the
+            common case with many stops) it naturally fills edge-to-edge
+            and drag/scroll behaves the same either way. min-w-full keeps
+            the outer flex container from collapsing narrower than the
+            scroll viewport, which is what actually lets justify-center
+            take effect. */}
+        <div className="flex min-w-full select-none items-start justify-center">
           {sorted.map((event, i) => {
             const year = Number(event.date.slice(0, 4));
             const isFirstOfYear =
