@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2026-08-02",
+    "displayDate": "08/02",
+    "location": "nyc",
+    "title": "test",
+    "organizers": "test",
+    "time": "123",
+    "address": "123",
+    "artists": [
+      "123"
+    ],
+    "description": "123",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/9c0c586d-7346-4983-bffb-294be5506b55.png",
+    "archived": false,
+    "id": "a98695b4-6adc-4bc7-9821-304f10ee726c"
+  }
+]
