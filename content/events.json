@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-08-02",
+    "displayDate": "08/02",
+    "location": "NYC",
+    "title": "(Dis)consent",
+    "organizers": "UAAD x MESH Arts",
+    "time": "7:30PM",
+    "address": "MESH Arts",
+    "artists": [
+      "Katherine Helen Fisher",
+      "Mengna Da ft. Chienn Tai",
+      "Shihan Zhang"
+    ],
+    "description": "",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/ee031a55-16b0-47bd-b1a4-d857f65de4f2.png",
+    "archived": false,
+    "id": "15d04e64-da32-42dd-ba7e-f19e75e5bfce"
+  }
+]
