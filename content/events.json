@@ -305,12 +305,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "Adam Bialek, Amy Yoshitsu, Andy DiLallo, Ben Gasta, Cao Shu, Cezar Mocan, Dion Nataraja Ekaterina Golovko, Elena Aya Bundurakis, Huanzhe Hu, lbuki Kuramochi, Ke Peng, Luca Lee, Margaret Noble, Marina Orlova, Mu Tuan, Nic Pehkonen, Rahul Juneja, Yiou Wang, Zhou Zhou"
+      "Adam Bialek",
+      "Amy Yoshitsu",
+      "Andy DiLallo",
+      "Ben Gasta",
+      "Cao Shu",
+      "Cezar Mocan",
+      "Dion Nataraja Ekaterina Golovko",
+      "Elena Aya Bundurakis",
+      "Huanzhe Hu",
+      "lbuki Kuramochi",
+      "Ke Peng",
+      "Luca Lee",
+      "Margaret Noble",
+      "Marina Orlova",
+      "Mu Tuan",
+      "Nic Pehkonen",
+      "Rahul Juneja",
+      "Yiou Wang",
+      "Zhou Zhou"
     ],
     "description": "Matrix of the Not-Yet is an interactive 3D publication that maps twenty artistic projects across four interconnected themes: Post-human Futures, Plural Technical Agency, Decolonial Cultural Resistance, and Interconnected Feminist Ecology. Rather than presenting works as isolated outputs, it frames each as a generative node within a living matrix. The “matrix,” rooted in the Latin mater, evokes an environment that gestates new life, positioning social, technological, and ecological contexts as sites for confronting complex problems and imagining alternative futures. Viewers navigate freely, constructing meaning through their own paths.",
-    "coverImage": "wix:image://v1/f4c0ba_391f139b279d451c88ec7fdeb9c1e75e~mv2.png/3D%20Map%20(2).png#originWidth=4096&originHeight=1982",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e3274c1f-b584-494a-b5b3-1ce561f8fb94.png",
     "archived": false,
-    "id": "0e8206c1-9528-4c71-87dc-1a2cb3cf72b1"
+    "id": "0e8206c1-9528-4c71-87dc-1a2cb3cf72b1",
+    "tags": []
   },
   {
     "date": "2024-05-23",
