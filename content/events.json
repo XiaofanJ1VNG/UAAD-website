@@ -604,12 +604,34 @@
     "time": "",
     "address": "",
     "artists": [
-      "A.J. Cincotta-Eichenfield, Alexandre Vianna, Alina Nazmeeva, Angie Lin Boyer, Camilo Salas, Caren Wenqing Ye & Shiqing Chen, Cecilia Villaverde, Deven Verma, Flâneuse du Mal, Hong Huo, Candice Wu, Juan Wamoo Alvarez, Ker Chen, SPLACES.STUDIO, Mu Tuan, Rachel TonThat, Victoria Cheredeeva, Schuyler Dragoo, Seitaro Yamazaki, Sutanuka Jashu, Tiffany Wei, Vidmina Stasiulyte"
+      "A.J. Cincotta-Eichenfield",
+      "Alexandre Vianna",
+      "Alina Nazmeeva",
+      "Angie Lin Boyer",
+      "Camilo Salas",
+      "Caren Wenqing Ye & Shiqing Chen",
+      "Cecilia Villaverde",
+      "Deven Verma",
+      "Flâneuse du Mal",
+      "Hong Huo",
+      "Candice Wu",
+      "Juan Wamoo Alvarez",
+      "Ker Chen",
+      "SPLACES.STUDIO",
+      "Mu Tuan",
+      "Rachel TonThat",
+      "Victoria Cheredeeva",
+      "Schuyler Dragoo",
+      "Seitaro Yamazaki",
+      "Sutanuka Jashu",
+      "Tiffany Wei",
+      "Vidmina Stasiulyte"
     ],
     "description": "As part of our 2024 Art Festival and two-year anniversary celebration, we invited artists, avant-garde practitioners, and visionaries to join our \"Jukebox of Dissonance.\" Here, subversive art and pioneering ideas flow like electric currents, with minds clashing and merging in creative chaos to birth the power of innovation. In this carefully curated jukebox, including a virtual exhibition, in-person artist talks and performances, we mix genres, shatter norms, and awaken slumbering senses through this event.",
-    "coverImage": "wix:image://v1/f4c0ba_9569918611884886a02e55a80c372e08~mv2.png/c23ce5d7ecced3e1bdb450c5d1afe85.png#originWidth=2560&originHeight=1351",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/fd5d16cc-c06c-4932-896c-14e7065d257a.png",
     "archived": false,
-    "id": "88da725b-0432-4c63-945f-206283b22350"
+    "id": "88da725b-0432-4c63-945f-206283b22350",
+    "tags": []
   },
   {
     "date": "2025-09-19",
