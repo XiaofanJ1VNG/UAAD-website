@@ -49,6 +49,20 @@ export async function addEvent(
   return next;
 }
 
+// Same idea as addEvent, but appends many events in a single commit —
+// used by the CSV bulk import so importing 40 old events is one write to
+// GitHub instead of 40.
+export async function bulkAddEvents(
+  newEvents: Omit<EventItem, "id">[],
+  token: string
+): Promise<EventItem[]> {
+  const { events, sha } = await loadEventsForAdmin(token);
+  const withIds: EventItem[] = newEvents.map((e) => ({ ...e, id: crypto.randomUUID() }));
+  const next = [...events, ...withIds];
+  await saveEvents(next, sha, `Bulk import ${withIds.length} events from CSV`, token);
+  return next;
+}
+
 export async function updateEvent(
   id: string,
   patch: Partial<EventItem>,

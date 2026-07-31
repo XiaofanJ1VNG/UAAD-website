@@ -14,7 +14,9 @@ import {
   updateEvent,
   deleteEvent,
   uploadCoverImage,
+  bulkAddEvents,
 } from "@/lib/eventsStore";
+import { parseEventsCsv, CSV_TEMPLATE, CsvImportResult } from "@/lib/csvImport";
 import { GITHUB_OWNER, GITHUB_REPO } from "@/lib/githubConfig";
 
 function displayDateFrom(dateStr: string) {
@@ -233,6 +235,8 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
           </button>
         </div>
       </div>
+
+      <BulkImportCsv token={token} onImported={setEvents} />
 
       {editingEvent ? (
         <EventForm
@@ -465,5 +469,146 @@ function EventForm({
         {saving ? "Saving to GitHub..." : submitLabel}
       </button>
     </form>
+  );
+}
+
+function BulkImportCsv({
+  token,
+  onImported,
+}: {
+  token: string;
+  onImported: (events: EventItem[]) => void;
+}) {
+  const [preview, setPreview] = useState<CsvImportResult | null>(null);
+  const [importing, setImporting] = useState(false);
+  const [result, setResult] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
+
+  async function handleFile(file: File) {
+    const text = await file.text();
+    setPreview(parseEventsCsv(text));
+    setResult(null);
+  }
+
+  async function handleImport() {
+    if (!preview || preview.events.length === 0) return;
+    setImporting(true);
+    setResult(null);
+    try {
+      const next = await bulkAddEvents(preview.events, token);
+      onImported(next);
+      setResult(`Imported ${preview.events.length} event${preview.events.length === 1 ? "" : "s"}.`);
+      setPreview(null);
+    } catch (err: any) {
+      setResult(`Import failed: ${err.message}`);
+    } finally {
+      setImporting(false);
+    }
+  }
+
+  function downloadTemplate() {
+    const blob = new Blob([CSV_TEMPLATE], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "uaad-events-template.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  return (
+    <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center justify-between text-left"
+      >
+        <span className="text-sm font-semibold text-white/70">
+          Bulk import from CSV {open ? "▲" : "▼"}
+        </span>
+      </button>
+
+      {open && (
+        <>
+          <p className="text-xs text-white/40">
+            Columns: <code className="text-white/60">date</code> (YYYY-MM-DD),{" "}
+            <code className="text-white/60">location</code>,{" "}
+            <code className="text-white/60">title</code>,{" "}
+            <code className="text-white/60">organizers</code>,{" "}
+            <code className="text-white/60">time</code>,{" "}
+            <code className="text-white/60">address</code>,{" "}
+            <code className="text-white/60">artists</code> (semicolon-separated),{" "}
+            <code className="text-white/60">description</code>,{" "}
+            <code className="text-white/60">coverImage</code> (a URL — CSV can&apos;t
+            carry image files, so this must link to an already-hosted image; leave
+            blank and add a photo later by editing the event), and{" "}
+            <code className="text-white/60">archived</code> (true/false, optional).
+            Only date, location, and title are required — rows missing those are
+            skipped and listed below rather than blocking the whole import.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={downloadTemplate}
+              className="rounded-lg border border-white/15 px-3 py-2 text-xs text-white/70"
+            >
+              Download template
+            </button>
+            <label className="flex cursor-pointer items-center gap-3 text-sm text-white/60">
+              <span className="rounded-lg border border-white/15 px-3 py-2">
+                Choose CSV file
+              </span>
+              <input
+                type="file"
+                accept=".csv,text/csv"
+                className="hidden"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (file) handleFile(file);
+                  e.target.value = "";
+                }}
+              />
+            </label>
+          </div>
+
+          {preview && (
+            <div className="flex flex-col gap-2 rounded-lg border border-white/10 p-3 text-sm">
+              <p>
+                Found{" "}
+                <span className="font-medium text-white">{preview.events.length}</span>{" "}
+                valid event{preview.events.length === 1 ? "" : "s"} to import.
+              </p>
+              {preview.errors.length > 0 && (
+                <ul className="list-disc pl-4 text-xs text-red-400">
+                  {preview.errors.map((e, i) => (
+                    <li key={i}>{e}</li>
+                  ))}
+                </ul>
+              )}
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={handleImport}
+                  disabled={importing || preview.events.length === 0}
+                  className="rounded-lg bg-accent px-3 py-2 text-xs font-medium text-ink disabled:opacity-50"
+                >
+                  {importing ? "Importing..." : `Import ${preview.events.length} events`}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPreview(null)}
+                  className="text-xs text-white/50"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+
+          {result && <p className="text-xs text-white/60">{result}</p>}
+        </>
+      )}
+    </div>
   );
 }
