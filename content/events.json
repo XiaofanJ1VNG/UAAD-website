@@ -251,12 +251,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "Flavia Mazzantti, Nina Sumarac, Reza Sedghi, SueKi Yee, Wei Wu, Xinyi Wu, Yilin Zhang, Zheyuan Zhang, Ke Peng and Yueshen Wu, Ishraki Kazi, Lyndsey Walsch, Daecheon Kim, Iliana sun, Ziv Epstein, Alina Tofan, Julie Sperling, Van O, Youju Kang, Zhao Jiajing"
+      "Flavia Mazzantti",
+      "Nina Sumarac",
+      "Reza Sedghi",
+      "SueKi Yee",
+      "Wei Wu",
+      "Xinyi Wu",
+      "Yilin Zhang",
+      "Zheyuan Zhang",
+      "Ke Peng and Yueshen Wu",
+      "Ishraki Kazi",
+      "Lyndsey Walsch",
+      "Daecheon Kim",
+      "Iliana sun",
+      "Ziv Epstein",
+      "Alina Tofan",
+      "Julie Sperling",
+      "Van O",
+      "Youju Kang",
+      "Zhao Jiajing"
     ],
     "description": "Ties That Cannot Be Unbound is an online exhibition that discusses the interconnectedness of spirituality and physicality, the blurred boundaries between the living and the non-living, and the ties between our bodies and the environment. Featuring outstanding works in sound, image, film, and interaction, this exhibition responds to the question: what kinds of ties are impossible to unbind? Join us on a journey of self-discovery and collective action towards a more sustainable and harmonious future.",
-    "coverImage": "wix:image://v1/f4c0ba_b3ccc813a7404bc08c0893b7a32439c8~mv2.jpg/IMG_8534.JPG#originWidth=2560&originHeight=1190",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/acfb41db-b4ef-4348-8db4-d799fe479693.JPG",
     "archived": false,
-    "id": "3e452adb-e84a-4cc1-b883-68f39c615be4"
+    "id": "3e452adb-e84a-4cc1-b883-68f39c615be4",
+    "tags": []
   },
   {
     "date": "2025-04-07",
