@@ -52,9 +52,10 @@
     "address": "",
     "artists": [],
     "description": "Are the boundaries that define our world truly inherent, or are they constructs waiting to be challenged? As an artificial notion diverging from universal interconnectedness, can we transcend these boundaries and disentangle ourselves from those unquestioned restrictions? Transcending Boundaries is an immersive pop-up exhibition inviting emerging artists to challenge ingrained notions, breaking through perception, gender, culture, specie, space and time.",
-    "coverImage": "wix:image://v1/f4c0ba_b9094e82a9a9482b9d7bae22f4debe3a~mv2.jpg/H0003913.JPG#originWidth=4800&originHeight=3200",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/ce3a6dbd-029f-4ef0-bebb-3e6966511ed1.JPG",
     "archived": false,
-    "id": "7139b57f-e3f0-4628-b756-979a69f7328f"
+    "id": "7139b57f-e3f0-4628-b756-979a69f7328f",
+    "tags": []
   },
   {
     "date": "2024-10-19",
