@@ -384,12 +384,14 @@
     "time": "",
     "address": "",
     "artists": [
-      "Frankfurt Helmet, Louzhang"
+      "Frankfurt Helmet",
+      "Louzhang"
     ],
     "description": "Curated by Louzhang-lz, this night brings the living, active sound of contemporary electronic music straight from Shanghai into Brooklyn.\nFrankfurt Helmet and Louzhang-lz, two close friends and radically different A/V electronic artists, stand as two distinct forces that have powerfully shaped Shanghai’s electronic music culture. Reuniting in Brooklyn on the opposite side of the planet, they deliver fresh contemporary rhythms from the Far East.",
-    "coverImage": "wix:image://v1/f4c0ba_c8e70bc7feef402d9bb21e53e78da6e1~mv2.jpg/0A1A0341.JPG#originWidth=6720&originHeight=4480",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/b1b02669-996f-40ef-bff3-8c39b3f291b0.JPG",
     "archived": false,
-    "id": "27c0fbce-d056-4514-ac80-08125ff273f4"
+    "id": "27c0fbce-d056-4514-ac80-08125ff273f4",
+    "tags": []
   },
   {
     "date": "2026-01-29",
