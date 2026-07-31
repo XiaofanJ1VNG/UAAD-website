@@ -128,7 +128,7 @@ export default function EventStop({
             </div>
           )}
           <div className="text-[21px] tracking-wide text-white/60">
-            {event.displayDate}, {event.location}
+            {event.displayDate}
           </div>
         </motion.div>
       </motion.div>
@@ -194,6 +194,10 @@ export default function EventStop({
 }
 
 function DetailPanel({ event }: { event: EventItem }) {
+  // Combine date + time into one "When" line; fall back to just the date
+  // when there's no time on record (bulk-imported events often lack one).
+  const when = event.time ? `${event.displayDate}, ${event.time}` : event.displayDate;
+
   return (
     <motion.div
       layout
@@ -208,15 +212,35 @@ function DetailPanel({ event }: { event: EventItem }) {
       </p>
       <dl className="mt-[6px] grid grid-cols-[auto,1fr] gap-x-[18px] gap-y-[6px] text-[18px] text-white/70">
         <dt className="text-white/40">When</dt>
-        <dd>{event.time}</dd>
+        <dd>{when}</dd>
         <dt className="text-white/40">Where</dt>
-        <dd>{event.address}</dd>
-        <dt className="text-white/40">Artists</dt>
-        <dd>{event.artists.join(", ")}</dd>
+        <dd>{event.location}</dd>
+        {event.artists.length > 0 && (
+          <>
+            <dt className="text-white/40">Artists</dt>
+            <dd>{event.artists.join(", ")}</dd>
+          </>
+        )}
+        {event.coOrganizedWith && (
+          <>
+            <dt className="text-white/40">Partners</dt>
+            <dd>{event.coOrganizedWith}</dd>
+          </>
+        )}
       </dl>
       <p className="mt-3 text-[14px] leading-relaxed text-white/80">
         {event.description}
       </p>
+      {event.url && (
+        <a
+          href={event.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-flex w-fit items-center rounded-full bg-accent px-4 py-2 text-[14px] font-medium text-ink transition-opacity hover:opacity-90"
+        >
+          Learn more
+        </a>
+      )}
     </motion.div>
   );
 }
