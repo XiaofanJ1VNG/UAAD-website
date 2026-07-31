@@ -15,8 +15,7 @@ interface Props {
 }
 
 // A tween (not a physics spring) so we get an explicit, symmetric
-// ease-in/out curve and a fixed duration we can tune directly, per brand
-// request for a slightly slower, eased expand/collapse.
+// ease-in/out curve and a fixed duration we can tune directly.
 const TRANSITION = { type: "tween", ease: "easeInOut", duration: 0.5 } as const;
 
 // Dot diameter and connecting-line thickness are the same value on
@@ -52,20 +51,27 @@ export default function EventStop({
       : "min(calc(100vw - 6rem), 788px)"
     : 264;
 
-  // Giving the card an explicit HEIGHT (not just width) here, in the same
-  // style object, matters: without it, height was left to intrinsic
-  // content sizing, which only settles once the newly-mounted active
-  // subtree (image + detail panel) has rendered — a frame or two after
-  // the width already jumped. That lag was the "stretches wide first,
-  // then catches up tall" glitch. With both dimensions known up front,
-  // Framer's layout animation interpolates width and height together
-  // from the very first frame.
+  // Explicit height alongside width (same style object, same render) so
+  // Framer's layout animation has both target dimensions from the first
+  // frame instead of height settling a frame late from content.
   const cardHeight = active ? (isDesktop ? 413 : 720) : 264;
 
   const cardStyle: React.CSSProperties = { width: cardWidth, height: cardHeight };
   const slotStyle: React.CSSProperties = {
     width: typeof cardWidth === "number" ? cardWidth + GAP : `calc(${cardWidth} + ${GAP}px)`,
   };
+
+  // Every img variant below shares this layoutId. Without it, swapping
+  // between the "inactive full-cover" <img> and the "active, positioned
+  // beside/above the detail panel" <img> is, to Framer, just an unrelated
+  // element unmounting and a brand new one mounting — the new one has no
+  // previous box to animate from, so it snaps straight to its final size
+  // instantly while the (separately, correctly, continuously animating)
+  // card shell is still resizing around it. That mismatch is exactly the
+  // "image already small, card still shrinking" desync. A shared layoutId
+  // tells Framer these are logically the same photo across the swap, so
+  // it animates its size/position change in step with everything else.
+  const imageLayoutId = `event-image-${event.id}`;
 
   return (
     <motion.div
@@ -80,30 +86,37 @@ export default function EventStop({
           next stop's line.
 
           This row itself has `layout` so it smoothly tracks the slot's
-          width change (that's the whole row growing/shrinking). The dot
-          and the date label ALSO get their own `layout` so Framer applies
-          the same nested scale-correction trick used for the card/image
-          elsewhere in this file: it cancels out the horizontal stretch
-          the row's own resize-transform would otherwise impose on them,
-          so they hold their true size and never look squashed/stretched.
-          The line bar is deliberately left as a plain (non-layout) div —
-          it's the one piece that SHOULD visibly stretch, since it's what
-          reads as the line elongating to match the wider row. */}
+          width change. The date label also gets its own `layout` so
+          Framer cancels the horizontal stretch the row's own resize
+          would otherwise impose on it. The line bar is deliberately left
+          as a plain (non-layout) div — it's the one piece that SHOULD
+          visibly stretch, since that reads as the line elongating. */}
       <motion.div layout transition={TRANSITION} className="relative h-24 w-full flex-shrink-0">
         <div
           className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
           style={{ backgroundColor: lineColor, opacity: 0.5, height: DOT_SIZE }}
         />
-        <motion.div
-          layout
-          transition={TRANSITION}
-          className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full ring-[6px] ring-ink"
-          style={{
-            backgroundColor: lineColor,
-            height: DOT_SIZE,
-            width: DOT_SIZE,
-          }}
-        />
+        {/* The dot is split into a plain OUTER div that does the static
+            "-translate-y-1/2" centering, with the `layout` motion.div
+            nested INSIDE it. `layout` takes over an element's own
+            transform to animate it — if it lived on the same element as
+            the manual centering transform, Framer's animated transform
+            would overwrite (not add to) that translate, so the dot
+            rendered without its centering offset and sat visibly low,
+            off the line. Nesting keeps the two transforms on separate
+            elements so neither clobbers the other. */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2">
+          <motion.div
+            layout
+            transition={TRANSITION}
+            className="rounded-full ring-[6px] ring-ink"
+            style={{
+              backgroundColor: lineColor,
+              height: DOT_SIZE,
+              width: DOT_SIZE,
+            }}
+          />
+        </div>
         <motion.div
           layout
           transition={TRANSITION}
@@ -140,6 +153,7 @@ export default function EventStop({
         {!active && (
           <motion.img
             layout
+            layoutId={imageLayoutId}
             transition={TRANSITION}
             src={event.coverImage}
             alt={`${event.title} flyer`}
@@ -151,6 +165,7 @@ export default function EventStop({
           <motion.div layout transition={TRANSITION} className="flex h-[413px]">
             <motion.img
               layout
+              layoutId={imageLayoutId}
               transition={TRANSITION}
               src={event.coverImage}
               alt={`${event.title} flyer`}
@@ -164,6 +179,7 @@ export default function EventStop({
           <motion.div layout transition={TRANSITION} className="flex h-full flex-col">
             <motion.img
               layout
+              layoutId={imageLayoutId}
               transition={TRANSITION}
               src={event.coverImage}
               alt={`${event.title} flyer`}
@@ -183,7 +199,7 @@ function DetailPanel({ event }: { event: EventItem }) {
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.15, duration: 0.25 }}
+      transition={{ ease: "easeInOut", delay: 0.15, duration: 0.25 }}
       className="flex min-w-0 flex-1 flex-col gap-[9px] overflow-y-auto p-[30px] font-display"
     >
       <h3 className="text-[20px] font-semibold leading-snug">{event.title}</h3>
