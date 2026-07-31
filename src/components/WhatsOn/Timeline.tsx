@@ -43,10 +43,10 @@ export default function Timeline() {
   }
 
   return (
-    <section aria-label="What's On" className="py-16 md:py-24">
-      <div className="px-6 text-center md:px-10">
-        <h2 className="font-offbit text-3xl font-bold md:text-5xl">What&apos;s On</h2>
-        <p className="mt-2 text-sm text-white/50">
+    <section aria-label="What's On" className="py-24 md:py-36">
+      <div className="px-9 text-center md:px-[60px]">
+        <h2 className="font-offbit text-[53px] font-bold md:text-[85px]">What&apos;s On</h2>
+        <p className="mt-3 text-[21px] text-white/50">
           <span className="hidden md:inline">
             Hover a flyer to preview the event. Scroll or click-and-drag to explore the timeline.
           </span>
@@ -55,20 +55,24 @@ export default function Timeline() {
           </span>
         </p>
         {!isLive && (
-          <p className="mt-1 text-xs text-white/30">
+          <p className="mt-2 text-[15px] text-white/30">
             Showing sample data — connect the GitHub content file to replace this.
           </p>
         )}
       </div>
 
-      {/* pt-16 reserves room for the date/year labels, which sit ABOVE the
-          line via negative positioning. Without this, they'd get silently
-          clipped: setting overflow-x to "auto" forces overflow-y to "auto"
-          too (a CSS quirk), so anything overflowing upward out of this box
-          was being cut off invisibly. */}
+      {/* pt-[120px] reserves room for the (now larger) date/year labels,
+          which sit ABOVE the line via negative positioning. Without this,
+          they'd get silently clipped: setting overflow-x to "auto" forces
+          overflow-y to "auto" too (a CSS quirk), so anything overflowing
+          upward out of this box was being cut off invisibly.
+
+          Horizontal padding (px-9 / md:px-[60px]) intentionally matches
+          the Header/hero/Footer padding so the subway line's frame lines
+          up with the rest of the page instead of feeling offset. */}
       <div
         ref={scrollRef}
-        className="no-scrollbar mt-10 cursor-grab overflow-x-auto px-6 pb-4 pt-16 active:cursor-grabbing md:px-10"
+        className="no-scrollbar mt-16 cursor-grab overflow-x-auto px-9 pb-6 pt-[120px] active:cursor-grabbing md:px-[60px]"
         onMouseDown={onPointerDown}
         onMouseMove={onPointerMove}
         onMouseUp={endDrag}
@@ -77,18 +81,27 @@ export default function Timeline() {
         {/* items-start (not items-end) so every stop's line row stays
             pinned to the same top edge — otherwise, when one card grows
             taller, the whole row re-aligns to the bottom and the
-            connecting line breaks out of position for every other stop. */}
-        {/* No gap here on purpose — each stop's own slot already includes
-            trailing spacing, so the connecting line stays unbroken.
-            justify-center centers the whole line as a unit: when it's
-            narrower than the viewport it sits in the middle instead of
-            hugging the left edge; once it's wider than the viewport (the
-            common case with many stops) it naturally fills edge-to-edge
-            and drag/scroll behaves the same either way. min-w-full keeps
-            the outer flex container from collapsing narrower than the
-            scroll viewport, which is what actually lets justify-center
-            take effect. */}
-        <div className="flex min-w-full select-none items-start justify-center">
+            connecting line breaks out of position for every other stop.
+
+            justify-[safe_center] (not plain justify-center) is the fix for
+            two bugs at once:
+            1. Plain `justify-center` on an overflowing flex row makes the
+               overflow on the START side unreachable by scrolling/dragging
+               (scrollLeft can never go negative), which clipped the left
+               end of the line with no way to reveal it.
+            2. It also caused the whole row to visually re-center itself
+               every time a card expanded, making expansion look like it
+               was growing from the middle instead of pinned to the card's
+               own top-left corner.
+            `safe` alignment falls back to flex-start whenever centering
+            would cause exactly this kind of clipping — so with 12 stops
+            (which overflow almost any viewport) it behaves like a normal
+            left-aligned, scrollable row, and only truly centers if the
+            content is ever narrow enough to fit without overflowing.
+            min-w-full keeps the row from collapsing narrower than the
+            scroll viewport, which is what lets the centered case work at
+            all. */}
+        <div className="flex min-w-full select-none items-start [justify-content:safe_center]">
           {sorted.map((event, i) => {
             const year = Number(event.date.slice(0, 4));
             const isFirstOfYear =

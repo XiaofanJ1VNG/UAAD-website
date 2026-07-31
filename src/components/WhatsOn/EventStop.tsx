@@ -16,6 +16,11 @@ interface Props {
 
 const SPRING = { type: "spring", stiffness: 260, damping: 30 } as const;
 
+// Dot diameter and connecting-line thickness are the same value on
+// purpose (per brand spec: the line should read as exactly as thick as
+// the stop marker, like a real subway map).
+const DOT_SIZE = 21;
+
 export default function EventStop({
   event,
   active,
@@ -37,12 +42,12 @@ export default function EventStop({
   // no gaps), while the card itself is narrower, leaving the gap as empty
   // space after the card. This is what makes the line read as one
   // continuous subway line instead of disconnected segments.
-  const GAP = 32;
+  const GAP = 48;
   const cardWidth = active
     ? isDesktop
-      ? 750 // 25% bigger than the original 600
-      : "min(calc(100vw - 4rem), 525px)"
-    : 176;
+      ? 1125
+      : "min(calc(100vw - 6rem), 788px)"
+    : 264;
   const cardStyle: React.CSSProperties = { width: cardWidth };
   const slotStyle: React.CSSProperties = {
     width: typeof cardWidth === "number" ? cardWidth + GAP : `calc(${cardWidth} + ${GAP}px)`,
@@ -58,22 +63,26 @@ export default function EventStop({
       {/* line + dot + date/location/year label — spans the full slot
           (including the trailing gap) so it connects seamlessly with the
           next stop's line */}
-      <div className="relative h-16 w-full flex-shrink-0">
+      <div className="relative h-24 w-full flex-shrink-0">
         <div
-          className="absolute left-0 right-0 top-1/2 h-[3px] -translate-y-1/2"
-          style={{ backgroundColor: lineColor, opacity: 0.5 }}
+          className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
+          style={{ backgroundColor: lineColor, opacity: 0.5, height: DOT_SIZE }}
         />
         <div
-          className="absolute left-0 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full ring-4 ring-ink"
-          style={{ backgroundColor: lineColor }}
+          className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full ring-[6px] ring-ink"
+          style={{
+            backgroundColor: lineColor,
+            height: DOT_SIZE,
+            width: DOT_SIZE,
+          }}
         />
-        <div className="absolute bottom-full left-0 mb-2.5 whitespace-nowrap font-offbit">
+        <div className="absolute bottom-full left-0 mb-[15px] whitespace-nowrap font-offbit">
           {isFirstOfYear && (
-            <div className="text-base font-bold tracking-wide" style={{ color: lineColor }}>
+            <div className="text-[24px] font-bold tracking-wide" style={{ color: lineColor }}>
               {year}
             </div>
           )}
-          <div className="text-sm tracking-wide text-white/60">
+          <div className="text-[21px] tracking-wide text-white/60">
             {event.displayDate}, {event.location}
           </div>
         </div>
@@ -88,7 +97,7 @@ export default function EventStop({
       <motion.div
         layout
         transition={SPRING}
-        className="mt-3 cursor-pointer overflow-hidden rounded-2xl bg-white/5 outline outline-1 outline-white/10"
+        className="mt-[18px] cursor-pointer overflow-hidden rounded-2xl bg-white/5 outline outline-1 outline-white/10"
         style={cardStyle}
         role="button"
         tabIndex={0}
@@ -101,17 +110,17 @@ export default function EventStop({
             layout
             src={event.coverImage}
             alt={`${event.title} flyer`}
-            className="h-44 w-full object-cover"
+            className="h-[264px] w-full object-cover"
           />
         )}
 
         {active && isDesktop && (
-          <motion.div layout className="flex h-[275px]">
+          <motion.div layout className="flex h-[413px]">
             <motion.img
               layout
               src={event.coverImage}
               alt={`${event.title} flyer`}
-              className="h-full w-[275px] flex-shrink-0 object-cover"
+              className="h-full w-[413px] flex-shrink-0 object-cover"
             />
             <DetailPanel event={event} />
           </motion.div>
@@ -123,7 +132,7 @@ export default function EventStop({
               layout
               src={event.coverImage}
               alt={`${event.title} flyer`}
-              className="h-[280px] w-full object-cover"
+              className="h-[420px] w-full object-cover"
             />
             <DetailPanel event={event} />
           </motion.div>
@@ -140,13 +149,13 @@ function DetailPanel({ event }: { event: EventItem }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.2 }}
-      className="flex min-w-0 flex-1 flex-col gap-1.5 overflow-y-auto p-5 font-display"
+      className="flex min-w-0 flex-1 flex-col gap-[9px] overflow-y-auto p-[30px] font-display"
     >
-      <h3 className="text-lg font-semibold leading-snug">{event.title}</h3>
-      <p className="text-xs uppercase tracking-wide text-white/50">
+      <h3 className="text-[20px] font-semibold leading-snug">{event.title}</h3>
+      <p className="text-[18px] uppercase tracking-wide text-white/50">
         {event.organizers}
       </p>
-      <dl className="mt-1 grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-xs text-white/70">
+      <dl className="mt-[6px] grid grid-cols-[auto,1fr] gap-x-[18px] gap-y-[6px] text-[18px] text-white/70">
         <dt className="text-white/40">When</dt>
         <dd>{event.time}</dd>
         <dt className="text-white/40">Where</dt>
@@ -154,7 +163,7 @@ function DetailPanel({ event }: { event: EventItem }) {
         <dt className="text-white/40">Artists</dt>
         <dd>{event.artists.join(", ")}</dd>
       </dl>
-      <p className="mt-2 text-sm leading-relaxed text-white/80">
+      <p className="mt-3 text-[14px] leading-relaxed text-white/80">
         {event.description}
       </p>
     </motion.div>

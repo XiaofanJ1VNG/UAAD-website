@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#121212",
+        ink: "#0D0D0D",
         accent: "#CBFD50",
       },
       fontFamily: {
