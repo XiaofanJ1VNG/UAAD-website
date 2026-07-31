@@ -515,9 +515,10 @@
     "address": "",
     "artists": [],
     "description": "​connect→collide→collab is a cross‑disciplinary matchmaking & gathering event for multimedia creators — visual artists, sound artists, performers, coders, designers, writers, curators, and those in between definitions.",
-    "coverImage": "wix:image://v1/f4c0ba_59e796ba1d934263939b49ddd055396c~mv2.jpg/corvus_visio_uaad-0198.jpg#originWidth=7728&originHeight=5152",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/899a0d1f-346f-4394-9f19-57f000f54635.jpg",
     "archived": false,
-    "id": "612d0c77-6878-483d-b3f2-ff2d38824698"
+    "id": "612d0c77-6878-483d-b3f2-ff2d38824698",
+    "tags": []
   },
   {
     "date": "2025-09-08",
