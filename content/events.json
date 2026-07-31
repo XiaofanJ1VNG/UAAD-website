@@ -355,12 +355,25 @@
     "time": "",
     "address": "",
     "artists": [
-      "Jiayi Li, Audrey Chou, Jianhao Zheng, Yetong Xin, Rainee (Yunyi) Wang, Yilin Ye, Am’blance (Josie Williams, Emma Fiona Jones, Sarah Allam), LOREM, Interactive Items, Dan Gorelick, Yuj Archetype"
+      "Jiayi Li",
+      "Audrey Chou",
+      "Jianhao Zheng",
+      "Yetong Xin",
+      "Rainee (Yunyi) Wang",
+      "Yilin Ye",
+      "Am’blance (Josie Williams",
+      "Emma Fiona Jones",
+      "Sarah Allam)",
+      "LOREM",
+      "Interactive Items",
+      "Dan Gorelick",
+      "Yuj Archetype"
     ],
     "description": "Titled after the Latin for “beyond the uterus,” imagined a world unbound from biological origins or inherited narratives. The curatorial framework proposed a new genesis born not from Eden but from collapse. What emerged was a procession of hybrid creatures, mythic beings, and sensorial ruptures.",
-    "coverImage": "wix:image://v1/f4c0ba_a6b69a8e76dd454995f5b75d6b31e241~mv2.jpg/e0557ddae27db8cbf2b37f3e7665c99.jpg#originWidth=6240&originHeight=4160",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/13adcf97-ba4d-4203-b144-93befef87d0c.jpg",
     "archived": false,
-    "id": "cea80ec1-c69c-4482-a398-6b2fb2cd1629"
+    "id": "cea80ec1-c69c-4482-a398-6b2fb2cd1629",
+    "tags": []
   },
   {
     "date": "2026-01-15",
