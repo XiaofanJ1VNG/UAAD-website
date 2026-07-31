@@ -13,6 +13,11 @@ import { colorForYear } from "./lineColors";
 // scroll position is set before paint, with no visible jump.
 const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
+// Matches EventStop's TRANSITION duration (0.5s) plus a small buffer, so
+// the auto-center-on-hover scroll fires once the card has finished
+// expanding rather than racing its own layout animation.
+const RECENTER_DELAY_MS = 520;
+
 export default function Timeline() {
   const isDesktop = useIsDesktop();
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -31,6 +36,19 @@ export default function Timeline() {
     [sorted]
   );
 
+  // Shared math for both the initial centering and the hover/tap
+  // recentering below: given an event id, compute the scrollLeft that
+  // puts that stop's slot in the horizontal center of the viewport.
+  function scrollLeftToCenter(container: HTMLDivElement, eventId: string): number | null {
+    const el = container.querySelector<HTMLElement>(`[data-event-id="${eventId}"]`);
+    if (!el) return null;
+    const containerRect = container.getBoundingClientRect();
+    const elRect = el.getBoundingClientRect();
+    const elLeftWithinContent = elRect.left - containerRect.left + container.scrollLeft;
+    const desired = elLeftWithinContent + elRect.width / 2 - container.clientWidth / 2;
+    return Math.max(0, desired);
+  }
+
   // On first load, center the timeline on the nearest upcoming event
   // (today or later) instead of dumping the visitor at the very first
   // stop chronologically. Falls back to the last event if everything is
@@ -45,17 +63,30 @@ export default function Timeline() {
 
     const todayStr = new Date().toISOString().slice(0, 10);
     const target = sorted.find((e) => e.date >= todayStr) ?? sorted[sorted.length - 1];
-    const el = container.querySelector<HTMLElement>(`[data-event-id="${target.id}"]`);
-    if (!el) return;
+    const desired = scrollLeftToCenter(container, target.id);
+    if (desired === null) return;
 
-    const containerRect = container.getBoundingClientRect();
-    const elRect = el.getBoundingClientRect();
-    const elLeftWithinContent = elRect.left - containerRect.left + container.scrollLeft;
-    const desired = elLeftWithinContent + elRect.width / 2 - container.clientWidth / 2;
-
-    container.scrollLeft = Math.max(0, desired);
+    container.scrollLeft = desired;
     hasCentered.current = true;
   }, [loading, sorted]);
+
+  // Whenever a stop becomes active (hover on desktop, tap on mobile), pan
+  // the timeline to bring it to the center. Delayed until the expand
+  // animation has settled so the measurement reflects the card's final
+  // (expanded) size rather than a mid-transition one.
+  useEffect(() => {
+    if (!activeId) return;
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const timeoutId = window.setTimeout(() => {
+      const desired = scrollLeftToCenter(container, activeId);
+      if (desired === null) return;
+      container.scrollTo({ left: desired, behavior: "smooth" });
+    }, RECENTER_DELAY_MS);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [activeId]);
 
   // Click-and-drag to pan the timeline horizontally with a mouse (in
   // addition to trackpad/touch scrolling), since expanded cards can push
@@ -77,7 +108,7 @@ export default function Timeline() {
   }
 
   return (
-    <section aria-label="What's On" className="py-24 md:py-36">
+    <section aria-label="What's On" className="pb-24 md:pb-36">
       <div className="px-9 text-center md:px-[60px]">
         <h2 className="font-offbit text-[53px] font-bold md:text-[85px]">What&apos;s On</h2>
         <p className="mt-3 text-[21px] text-white/50">

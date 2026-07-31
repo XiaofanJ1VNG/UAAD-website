@@ -14,7 +14,10 @@ interface Props {
   onToggle: () => void;
 }
 
-const SPRING = { type: "spring", stiffness: 260, damping: 30 } as const;
+// A tween (not a physics spring) so we get an explicit, symmetric
+// ease-in/out curve and a fixed duration we can tune directly, per brand
+// request for a slightly slower, eased expand/collapse.
+const TRANSITION = { type: "tween", ease: "easeInOut", duration: 0.5 } as const;
 
 // Dot diameter and connecting-line thickness are the same value on
 // purpose (per brand spec: the line should read as exactly as thick as
@@ -48,7 +51,18 @@ export default function EventStop({
       ? 1125
       : "min(calc(100vw - 6rem), 788px)"
     : 264;
-  const cardStyle: React.CSSProperties = { width: cardWidth };
+
+  // Giving the card an explicit HEIGHT (not just width) here, in the same
+  // style object, matters: without it, height was left to intrinsic
+  // content sizing, which only settles once the newly-mounted active
+  // subtree (image + detail panel) has rendered — a frame or two after
+  // the width already jumped. That lag was the "stretches wide first,
+  // then catches up tall" glitch. With both dimensions known up front,
+  // Framer's layout animation interpolates width and height together
+  // from the very first frame.
+  const cardHeight = active ? (isDesktop ? 413 : 720) : 264;
+
+  const cardStyle: React.CSSProperties = { width: cardWidth, height: cardHeight };
   const slotStyle: React.CSSProperties = {
     width: typeof cardWidth === "number" ? cardWidth + GAP : `calc(${cardWidth} + ${GAP}px)`,
   };
@@ -56,7 +70,7 @@ export default function EventStop({
   return (
     <motion.div
       layout
-      transition={SPRING}
+      transition={TRANSITION}
       className="flex flex-shrink-0 flex-col items-start"
       style={slotStyle}
       data-event-id={event.id}
@@ -75,14 +89,14 @@ export default function EventStop({
           The line bar is deliberately left as a plain (non-layout) div —
           it's the one piece that SHOULD visibly stretch, since it's what
           reads as the line elongating to match the wider row. */}
-      <motion.div layout transition={SPRING} className="relative h-24 w-full flex-shrink-0">
+      <motion.div layout transition={TRANSITION} className="relative h-24 w-full flex-shrink-0">
         <div
           className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
           style={{ backgroundColor: lineColor, opacity: 0.5, height: DOT_SIZE }}
         />
         <motion.div
           layout
-          transition={SPRING}
+          transition={TRANSITION}
           className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full ring-[6px] ring-ink"
           style={{
             backgroundColor: lineColor,
@@ -92,7 +106,7 @@ export default function EventStop({
         />
         <motion.div
           layout
-          transition={SPRING}
+          transition={TRANSITION}
           className="absolute bottom-full left-0 mb-[15px] whitespace-nowrap font-offbit"
         >
           {isFirstOfYear && (
@@ -114,7 +128,7 @@ export default function EventStop({
           image/text instead of smoothly reflowing them. */}
       <motion.div
         layout
-        transition={SPRING}
+        transition={TRANSITION}
         className="mt-[18px] cursor-pointer overflow-hidden rounded-2xl bg-white/5 outline outline-1 outline-white/10"
         style={cardStyle}
         role="button"
@@ -126,6 +140,7 @@ export default function EventStop({
         {!active && (
           <motion.img
             layout
+            transition={TRANSITION}
             src={event.coverImage}
             alt={`${event.title} flyer`}
             className="h-[264px] w-full object-cover"
@@ -133,9 +148,10 @@ export default function EventStop({
         )}
 
         {active && isDesktop && (
-          <motion.div layout className="flex h-[413px]">
+          <motion.div layout transition={TRANSITION} className="flex h-[413px]">
             <motion.img
               layout
+              transition={TRANSITION}
               src={event.coverImage}
               alt={`${event.title} flyer`}
               className="h-full w-[413px] flex-shrink-0 object-cover"
@@ -145,12 +161,13 @@ export default function EventStop({
         )}
 
         {active && !isDesktop && (
-          <motion.div layout className="flex flex-col">
+          <motion.div layout transition={TRANSITION} className="flex h-full flex-col">
             <motion.img
               layout
+              transition={TRANSITION}
               src={event.coverImage}
               alt={`${event.title} flyer`}
-              className="h-[420px] w-full object-cover"
+              className="h-[420px] w-full flex-shrink-0 object-cover"
             />
             <DetailPanel event={event} />
           </motion.div>
@@ -166,7 +183,7 @@ function DetailPanel({ event }: { event: EventItem }) {
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.1, duration: 0.2 }}
+      transition={{ delay: 0.15, duration: 0.25 }}
       className="flex min-w-0 flex-1 flex-col gap-[9px] overflow-y-auto p-[30px] font-display"
     >
       <h3 className="text-[20px] font-semibold leading-snug">{event.title}</h3>

@@ -27,7 +27,8 @@ export default function Header() {
   // Mirrors the Wix "Disappear" scroll effect (Overlap: next section,
   // Direction: up, Distance: 100%): header slides fully out of view when
   // scrolling down, and slides back in on any upward scroll or once back
-  // near the very top.
+  // near the very top. Hiding is slower (0.4s) than showing (0.2s) — set
+  // via inline style below so each direction can use its own duration.
   useEffect(() => {
     function onScroll() {
       const y = window.scrollY;
@@ -48,14 +49,24 @@ export default function Header() {
     <>
       <div
         ref={barRef}
-        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-6 py-5 transition-transform duration-1000 ease-[cubic-bezier(0.37,0,0.63,1)] md:px-10 md:py-6"
-        style={{ transform: hidden ? "translateY(-100%)" : "translateY(0)" }}
+        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-6 py-5 transition-transform ease-[cubic-bezier(0.37,0,0.63,1)] md:px-10 md:py-6"
+        style={{
+          transform: hidden ? "translateY(-100%)" : "translateY(0)",
+          transitionDuration: hidden ? "400ms" : "200ms",
+        }}
       >
         <Link href="/" className="flex-shrink-0">
           <Logo className="h-9 w-9 md:h-10 md:w-10" />
         </Link>
 
-        <nav className="hidden h-[50px] items-center gap-[6px] rounded-[100px] bg-[#272727]/80 px-1.5 md:flex">
+        {/* Absolutely positioned + centered on the header's own width
+            (not just optically balanced between logo/search via
+            justify-between), so it lines up with the page's true center
+            regardless of how wide the logo or search box end up being.
+            Wider item padding (px-8) elongates the pill to match the
+            original design's more generous spacing; backdrop-blur-[80px]
+            is the requested glass effect on the container. */}
+        <nav className="absolute left-1/2 hidden h-[50px] -translate-x-1/2 items-center gap-[6px] rounded-[100px] bg-[#272727]/80 px-1.5 backdrop-blur-[80px] md:flex">
           {NAV_LINKS.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -63,7 +74,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={
-                  "rounded-full border px-[10px] py-[5px] text-center text-[20px] transition-colors " +
+                  "rounded-full border px-8 py-[5px] text-center text-[18px] transition-colors " +
                   (isActive
                     ? "border-[#6E6E6E] bg-[#121212] text-accent"
                     : "border-[#6E6E6E] bg-[#757575]/20 text-white hover:border-transparent hover:bg-[#121212]")
