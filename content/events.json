@@ -573,12 +573,27 @@
     "time": "",
     "address": "",
     "artists": [
-      "Sam Lavigne, Temitope Olujobi, Anna Zhang, Queenie Wu, Tina Tarighian, k0j0 (Koi Ren and Joey Verbeke), foxes, Mengna Da, Iris Xiaoyu Qu, Niles Fromm, Adam Salem, Julia Kan, Jasmine Nackash, Supernova191919, Foreseen Agency"
+      "Sam Lavigne",
+      "Temitope Olujobi",
+      "Anna Zhang",
+      "Queenie Wu",
+      "Tina Tarighian",
+      "k0j0 (Koi Ren and Joey Verbeke)",
+      "foxes",
+      "Mengna Da",
+      "Iris Xiaoyu Qu",
+      "Niles Fromm",
+      "Adam Salem",
+      "Julia Kan",
+      "Jasmine Nackash",
+      "Supernova191919",
+      "Foreseen Agency"
     ],
     "description": "​Attention // Distraction is an exhibition presented by Underground Art And Design (UAAD). It explores misplaced and mediated attention through interactive installations, net art, XR, artist-made games, live performance and artist talks.",
-    "coverImage": "wix:image://v1/f4c0ba_134028b1a0464773aa474e1ccdfe7bed~mv2.jpg/A1204560.JPG#originWidth=5760&originHeight=8640",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/5e8329d3-d511-4048-b29a-ee29cb1d7407.JPG",
     "archived": false,
-    "id": "693f0040-9c78-4b6b-96c7-6d2c7c94e319"
+    "id": "693f0040-9c78-4b6b-96c7-6d2c7c94e319",
+    "tags": []
   },
   {
     "date": "2024-10-19",
