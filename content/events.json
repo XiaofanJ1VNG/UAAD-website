@@ -286,12 +286,15 @@
     "time": "",
     "address": "",
     "artists": [
-      "Alina Nazmeeva, Carrie Sijia Wang, Sutanuka Jashu"
+      "Alina Nazmeeva",
+      "Carrie Sijia Wang",
+      "Sutanuka Jashu"
     ],
     "description": "Presented by Parsons School of Design and UAAD, this panel gathers visionary artists, designers, educators, and researchers working at the forefront of AI, creativity, and ethics. As part of the Design with AI course at Parsons, panelists will present their work and engage in dialogue with students, faculty, and public attendees on how AI is reshaping artistic and design practices, the ethical dimensions of AI in creative fields, and its broader societal impact—both transformative and controversial.",
-    "coverImage": "wix:image://v1/f4c0ba_65acf523e75641e593eaf5a457b03834~mv2.jpg/BG%20Animation_1-2160x1080%20(3).jpg#originWidth=2160&originHeight=1080",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/122b87fb-2ac0-4674-8edc-c2edfd9ac314.jpg",
     "archived": false,
-    "id": "e1e18d6f-ee3f-428a-a10f-122e2dcf463b"
+    "id": "e1e18d6f-ee3f-428a-a10f-122e2dcf463b",
+    "tags": []
   },
   {
     "date": "2024-06-15",
