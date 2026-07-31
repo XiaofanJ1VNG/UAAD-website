@@ -223,12 +223,24 @@
     "time": "",
     "address": "",
     "artists": [
-      "Shelly Maye, Rosalind Lowry, Molly Wickett, Mark Lawson Bell, Liangchen Sui, Sangwon Jo, Franz Petto, Bethan Hamilto, Cemre Nomer, Chelsea Ning, Bhavani Esapathi, Alexandria Zlatar and Thasil Suhara Backer."
+      "Shelly Maye",
+      "Rosalind Lowry",
+      "Molly Wickett",
+      "Mark Lawson Bell",
+      "Liangchen Sui",
+      "Sangwon Jo",
+      "Franz Petto",
+      "Bethan Hamilto",
+      "Cemre Nomer",
+      "Chelsea Ning",
+      "Bhavani Esapathi",
+      "Alexandria Zlatar and Thasil Suhara Backer."
     ],
     "description": "In the contemporary landscape, care is an act of profound significance tied to the essence of our existence. \"Care is Art, Art is Care\" encapsulates the symbiotic relationship between artistic expression and the ethos of care. It posits that care, in all its forms—whether directed towards the environment, communities, or oneself—transcends mere action to become a form of art. Conversely, art becomes a vehicle for care, a medium through which empathy, responsibility, and interconnectedness are communicated and practiced. This exhibition explores this fluid interchange, asserting that caring for the world and its inhabitants is not only necessary but inherently creative and deeply transformative.",
-    "coverImage": "wix:image://v1/f4c0ba_d7dd7e7332f64f6fad5610749d7bdfc7~mv2.png/Care%20is%20Art%20Art%20is%20CARE%20on%2024-7-16%20at%2016.16%20(3).png#originWidth=2560&originHeight=1440",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e41f0584-3f8a-4899-a224-535b18b829d4.png",
     "archived": false,
-    "id": "7ac84258-b25a-41b1-8055-23935086f5d9"
+    "id": "7ac84258-b25a-41b1-8055-23935086f5d9",
+    "tags": []
   },
   {
     "date": "2023-03-25",
