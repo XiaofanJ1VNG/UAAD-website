@@ -402,12 +402,16 @@
     "time": "",
     "address": "",
     "artists": [
-      "Interactive Items, Nightshining (Michael Romeo), Entroplay (Armon Naeini), Tench Cholnoky"
+      "Interactive Items",
+      "Nightshining (Michael Romeo)",
+      "Entroplay (Armon Naeini)",
+      "Tench Cholnoky"
     ],
     "description": "Hortus Apertus, or “the garden of openness,” reimagines the garden as a site of expansiveness rather than protection. In contrast to the Hortus Conclusus, historically conceived as an enclosed sanctuary that safeguards and contains growth, this project proposes the garden as a field of relation where boundaries between the organic and synthetic, the natural and artificial, dissolve to embrace the infinite.\n\nIn this open terrain, the future is approached not as a linear projection but as a quantum field of potential. Hortus Apertus invites us to inhabit openness and emergence as generative forces, and to consider what forms of life and thought might arise when growth unfolds beyond constraint and enclosure.",
-    "coverImage": "wix:image://v1/f4c0ba_5931beae91ee467195852896156cd022~mv2.png/6577d85f6c91d7b65f6a9ec3_1%202.png#originWidth=2161&originHeight=2228",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/62ae0c83-64ec-4a65-a5fc-cd27357ea766.png",
     "archived": false,
-    "id": "4a284577-7049-4f8b-a3a5-3d6282b46d99"
+    "id": "4a284577-7049-4f8b-a3a5-3d6282b46d99",
+    "tags": []
   },
   {
     "date": "2026-08-02",
