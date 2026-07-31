@@ -63,6 +63,35 @@ export async function bulkAddEvents(
   return next;
 }
 
+// Wipes out the existing events entirely and replaces them with a fresh
+// CSV import, in one commit. Used when a previous import ran with broken
+// parsing (e.g. missing tags/fields) and re-importing the same CSV with
+// `bulkAddEvents` would otherwise just pile duplicates on top of the bad
+// rows instead of fixing them.
+export async function replaceAllEvents(
+  newEvents: Omit<EventItem, "id">[],
+  token: string
+): Promise<EventItem[]> {
+  const { sha } = await loadEventsForAdmin(token);
+  const withIds: EventItem[] = newEvents.map((e) => ({ ...e, id: crypto.randomUUID() }));
+  await saveEvents(withIds, sha, `Replace all events with CSV import (${withIds.length} events)`, token);
+  return withIds;
+}
+
+// Assigns uploaded cover images to existing events by id, in one commit —
+// used by the bulk image upload tool so matching N photos to N events
+// costs one GitHub write instead of N.
+export async function bulkAssignCoverImages(
+  assignments: { id: string; coverImage: string }[],
+  token: string
+): Promise<EventItem[]> {
+  const { events, sha } = await loadEventsForAdmin(token);
+  const map = new Map(assignments.map((a) => [a.id, a.coverImage]));
+  const next = events.map((e) => (map.has(e.id) ? { ...e, coverImage: map.get(e.id)! } : e));
+  await saveEvents(next, sha, `Bulk assign ${assignments.length} cover image(s)`, token);
+  return next;
+}
+
 export async function updateEvent(
   id: string,
   patch: Partial<EventItem>,
