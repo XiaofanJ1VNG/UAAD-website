@@ -67,9 +67,10 @@
     "address": "",
     "artists": [],
     "description": "As part of our 2024 Art Festival and two-year anniversary celebration, we invited artists, avant-garde practitioners, and visionaries to join our \"Jukebox of Dissonance.\" Here, subversive art and pioneering ideas flow like electric currents, with minds clashing and merging in creative chaos to birth the power of innovation. In this carefully curated jukebox, including a virtual exhibition, in-person artist talks and performances, we mix genres, shatter norms, and awaken slumbering senses through this event.",
-    "coverImage": "wix:image://v1/f4c0ba_b7518ae414e4494cb20264833b6a90aa~mv2.jpg/DSC03134_edited.jpg#originWidth=2299&originHeight=2004",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e5f5237b-f77e-4c4a-bdf1-f619462161e9.jpg",
     "archived": false,
-    "id": "55c69002-115a-48bb-b7ec-85ad207bccbd"
+    "id": "55c69002-115a-48bb-b7ec-85ad207bccbd",
+    "tags": []
   },
   {
     "date": "2026-06-13",
