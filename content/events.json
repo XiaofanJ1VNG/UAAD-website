@@ -8,12 +8,39 @@
     "time": "",
     "address": "",
     "artists": [
-      "Aiping Xu, A.J. Cincotta-Eichenfield, Angela M Link, Bobby Zhaocheng Xiong, Chia-Hua Lee, Christie Lau, Elizabeth Russ and Michael Donnelly, Fatima Al-Kuwari, Flavia Mazzanti, Ishraki Kazi, Joshua Carlos Barrera, Krithi Nalla, Ludovica Galleani d'Aglian, Meiyi Jiang and Xiaoting Tan, Mehrdad Sedaghat-Baghbani, Mingyong Cheng, Mo Nan, Shashwath Santosh, Symonne Liu, Tiange Wang and I-Yang Huang, Tianyun Jiang, Xinyuan Ma, Yimei Zheng, Yu Chen, Yuwen Huang, Yuqing Liang, Zhijun Song and Yalin Hu"
+      "Aiping Xu",
+      "A.J. Cincotta-Eichenfield",
+      "Angela M Link",
+      "Bobby Zhaocheng Xiong",
+      "Chia-Hua Lee",
+      "Christie Lau",
+      "Elizabeth Russ and Michael Donnelly",
+      "Fatima Al-Kuwari",
+      "Flavia Mazzanti",
+      "Ishraki Kazi",
+      "Joshua Carlos Barrera",
+      "Krithi Nalla",
+      "Ludovica Galleani d'Aglian",
+      "Meiyi Jiang and Xiaoting Tan",
+      "Mehrdad Sedaghat-Baghbani",
+      "Mingyong Cheng",
+      "Mo Nan",
+      "Shashwath Santosh",
+      "Symonne Liu",
+      "Tiange Wang and I-Yang Huang",
+      "Tianyun Jiang",
+      "Xinyuan Ma",
+      "Yimei Zheng",
+      "Yu Chen",
+      "Yuwen Huang",
+      "Yuqing Liang",
+      "Zhijun Song and Yalin Hu"
     ],
     "description": "Alt-Alterity reimagines a world in which the concept of alterity no longer operates as a mechanism of power, separation, or control. Rather than reinforcing binaries such as self and other, or human and non-human, the project invites participants to experience identity as fluid, relational, and continuously shaped through entanglement with surrounding systems.",
-    "coverImage": "wix:image://v1/f4c0ba_85c63d72131649cc9f6bf1fe3b6095b1~mv2.jpg/0.jpg#originWidth=2012&originHeight=1500",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/da771191-ec1c-45e1-b75e-afcb7d9d5492.jpg",
     "archived": false,
-    "id": "5564a892-0e44-4271-b26d-72bd663355d4"
+    "id": "5564a892-0e44-4271-b26d-72bd663355d4",
+    "tags": []
   },
   {
     "date": "2023-08-20",
@@ -25,9 +52,10 @@
     "address": "",
     "artists": [],
     "description": "Are the boundaries that define our world truly inherent, or are they constructs waiting to be challenged? As an artificial notion diverging from universal interconnectedness, can we transcend these boundaries and disentangle ourselves from those unquestioned restrictions? Transcending Boundaries is an immersive pop-up exhibition inviting emerging artists to challenge ingrained notions, breaking through perception, gender, culture, specie, space and time.",
-    "coverImage": "wix:image://v1/f4c0ba_b9094e82a9a9482b9d7bae22f4debe3a~mv2.jpg/H0003913.JPG#originWidth=4800&originHeight=3200",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/ce3a6dbd-029f-4ef0-bebb-3e6966511ed1.JPG",
     "archived": false,
-    "id": "7139b57f-e3f0-4628-b756-979a69f7328f"
+    "id": "7139b57f-e3f0-4628-b756-979a69f7328f",
+    "tags": []
   },
   {
     "date": "2024-10-19",
@@ -39,9 +67,10 @@
     "address": "",
     "artists": [],
     "description": "As part of our 2024 Art Festival and two-year anniversary celebration, we invited artists, avant-garde practitioners, and visionaries to join our \"Jukebox of Dissonance.\" Here, subversive art and pioneering ideas flow like electric currents, with minds clashing and merging in creative chaos to birth the power of innovation. In this carefully curated jukebox, including a virtual exhibition, in-person artist talks and performances, we mix genres, shatter norms, and awaken slumbering senses through this event.",
-    "coverImage": "wix:image://v1/f4c0ba_b7518ae414e4494cb20264833b6a90aa~mv2.jpg/DSC03134_edited.jpg#originWidth=2299&originHeight=2004",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e5f5237b-f77e-4c4a-bdf1-f619462161e9.jpg",
     "archived": false,
-    "id": "55c69002-115a-48bb-b7ec-85ad207bccbd"
+    "id": "55c69002-115a-48bb-b7ec-85ad207bccbd",
+    "tags": []
   },
   {
     "date": "2026-06-13",
@@ -52,12 +81,25 @@
     "time": "",
     "address": "",
     "artists": [
-      "MF Clarke, ZYKR, Matthew D Gantt, Nsyme × Andalu & Rob Interface, c03ra, Skulptor, IKYA, GORZ (sound with m preis), Tanky, Ruipeng Wang, pppunko (sound by KEIU / Raven), Lin Feng (sound by Raven), Jessie Han (sound by Bobi & Fliko)"
+      "MF Clarke",
+      "ZYKR",
+      "Matthew D Gantt",
+      "Nsyme × Andalu & Rob Interface",
+      "c03ra",
+      "Skulptor",
+      "IKYA",
+      "GORZ (sound with m preis)",
+      "Tanky",
+      "Ruipeng Wang",
+      "pppunko (sound by KEIU / Raven)",
+      "Lin Feng (sound by Raven)",
+      "Jessie Han (sound by Bobi & Fliko)"
     ],
     "description": "To drift is to move without fixed coordinates. To encounter others in transit. To remain suspended between geographies, languages, temporalities, and systems both natural and artificial.\n\nWorlds Adrift gathers artists from different parts of the world to construct an ephemeral environment of frequencies, ruptures, textures, and echoes, where images breathe, sound mutates, and worlds briefly overlap before dissolving again.\n\nThe event is co-organized by Creative Code Art and Underground Art and Design (UAAD), two NYC-based platforms supporting artists working with technology as materials, methods, and sites of inquiry.",
-    "coverImage": "wix:image://v1/f4c0ba_3fa4c95efbbe40aea717b4554354be6a~mv2.jpg/A1205055.JPG#originWidth=8640&originHeight=5760",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/07971945-37cc-465c-a163-43fee672b1b4.JPG",
     "archived": false,
-    "id": "f57e4762-0bfc-45fc-a3a6-a632bb564966"
+    "id": "f57e4762-0bfc-45fc-a3a6-a632bb564966",
+    "tags": []
   },
   {
     "date": "2023-12-19",
@@ -68,12 +110,39 @@
     "time": "",
     "address": "",
     "artists": [
-      "Aiping Xu, A.J. Cincotta-Eichenfield, Angela M Link, Bobby Zhaocheng Xiong, Chia-Hua Lee, Christie Lau, Elizabeth Russ and Michael Donnelly, Fatima Al-Kuwari, Flavia Mazzanti, Ishraki Kazi, Joshua Carlos Barrera, Krithi Nalla, Ludovica Galleani d'Aglian, Meiyi Jiang and Xiaoting Tan, Mehrdad Sedaghat-Baghbani, Mingyong Cheng, Mo Nan, Shashwath Santosh, Symonne Liu, Tiange Wang and I-Yang Huang, Tianyun Jiang, Xinyuan Ma, Yimei Zheng, Yu Chen, Yuwen Huang, Yuqing Liang, Zhijun Song and Yalin Hu"
+      "Aiping Xu",
+      "A.J. Cincotta-Eichenfield",
+      "Angela M Link",
+      "Bobby Zhaocheng Xiong",
+      "Chia-Hua Lee",
+      "Christie Lau",
+      "Elizabeth Russ and Michael Donnelly",
+      "Fatima Al-Kuwari",
+      "Flavia Mazzanti",
+      "Ishraki Kazi",
+      "Joshua Carlos Barrera",
+      "Krithi Nalla",
+      "Ludovica Galleani d'Aglian",
+      "Meiyi Jiang and Xiaoting Tan",
+      "Mehrdad Sedaghat-Baghbani",
+      "Mingyong Cheng",
+      "Mo Nan",
+      "Shashwath Santosh",
+      "Symonne Liu",
+      "Tiange Wang and I-Yang Huang",
+      "Tianyun Jiang",
+      "Xinyuan Ma",
+      "Yimei Zheng",
+      "Yu Chen",
+      "Yuwen Huang",
+      "Yuqing Liang",
+      "Zhijun Song and Yalin Hu"
     ],
     "description": "Alt-Alterity reimagines a world in which the concept of alterity no longer operates as a mechanism of power, separation, or control. Rather than reinforcing binaries such as self and other, or human and non-human, the project invites participants to experience identity as fluid, relational, and continuously shaped through entanglement with surrounding systems.",
-    "coverImage": "wix:image://v1/f4c0ba_43825e6b1d34498389993c20262a5862~mv2.jpeg/New%20Art%20City%20-%20Part%203_%20Fluid%20Bodies,%20Blurred%20Boundaries%20(12).jpeg#originWidth=3360&originHeight=1808",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/59d93b8a-e7a2-438c-95c5-8338a91f2bba.jpeg",
     "archived": false,
-    "id": "62a0b7b8-d5cf-4638-935f-40c4ff8a4a6d"
+    "id": "62a0b7b8-d5cf-4638-935f-40c4ff8a4a6d",
+    "tags": []
   },
   {
     "date": "2025-10-10",
@@ -84,12 +153,17 @@
     "time": "",
     "address": "",
     "artists": [
-      "Moon Davé, elekhlekha อีเหละเขละขละ, Torin Blankensmith, Dan Gorelick, Reckoner"
+      "Moon Davé",
+      "elekhlekha อีเหละเขละขละ",
+      "Torin Blankensmith",
+      "Dan Gorelick",
+      "Reckoner"
     ],
     "description": "For our third anniversary, we partnered with the Processing Foundation and Artifice for an evening of talks and audiovisual performances that challenged normative structures through experimental sound and critical uses of technology.",
-    "coverImage": "wix:image://v1/f4c0ba_e8321a573e054386a7ad5ce1ac5f9b9c~mv2.jpeg/DSCF4593.jpeg#originWidth=5152&originHeight=7728",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/07870f61-6b9e-4d60-a70c-f26eb24f4de1.jpeg",
     "archived": false,
-    "id": "96118389-04ad-412e-961a-8977c612abbd"
+    "id": "96118389-04ad-412e-961a-8977c612abbd",
+    "tags": []
   },
   {
     "date": "2026-01-14",
@@ -100,12 +174,45 @@
     "time": "",
     "address": "",
     "artists": [
-      "Carrie Sijia Wang, Luca Lee, Munus Shih, Interactive Items, Mason Youngblood, Joaquina Salgado, Jazsalyn, Dominika Čupková, Andrea Mikyska, Andy DiLallo, Ian Anderson, Jacob Riddle, Amanda Bennetts, Florence Alwajih, K0j0 (Koi Ren, Joey Verbeke), Laura Elidedt Rodriguez, Marcos Micozzi, Hef Prentice, Mingyong Cheng, Sophia Sun, Han Zhang, Yuemeng Gu, erika, Parham Ghalamdar, Samar Younes, Shihan Zhang, Ziwei Liu, Qingxiao Zheng, Yashika Goel, Ziv Epstein, Amy Smith, Hope Schroeder"
+      "Carrie Sijia Wang",
+      "Luca Lee",
+      "Munus Shih",
+      "Interactive Items",
+      "Mason Youngblood",
+      "Joaquina Salgado",
+      "Jazsalyn",
+      "Dominika Čupková",
+      "Andrea Mikyska",
+      "Andy DiLallo",
+      "Ian Anderson",
+      "Jacob Riddle",
+      "Amanda Bennetts",
+      "Florence Alwajih",
+      "K0j0 (Koi Ren",
+      "Joey Verbeke)",
+      "Laura Elidedt Rodriguez",
+      "Marcos Micozzi",
+      "Hef Prentice",
+      "Mingyong Cheng",
+      "Sophia Sun",
+      "Han Zhang",
+      "Yuemeng Gu",
+      "erika",
+      "Parham Ghalamdar",
+      "Samar Younes",
+      "Shihan Zhang",
+      "Ziwei Liu",
+      "Qingxiao Zheng",
+      "Yashika Goel",
+      "Ziv Epstein",
+      "Amy Smith",
+      "Hope Schroeder"
     ],
     "description": "Technomirage is an event series exploring how artists might use emerging technologies such as AI to challenge the supposed inevitability of replacement and threat. Rather than positioning AI as something to fear, the series frames it as a site for agency, critical engagement, and ethical questioning. It asks how we might participate in shaping technological futures and collectively examine what is right and good within society.",
-    "coverImage": "wix:image://v1/f4c0ba_9abf926bb793417eab0b835333e90c44~mv2.png/360_202601141449.png#originWidth=1280&originHeight=720",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/a180fd74-bf1a-48d8-b5e6-fa1638790d1c.png",
     "archived": false,
-    "id": "00f3928e-e5e2-4620-9cf6-8f4626604271"
+    "id": "00f3928e-e5e2-4620-9cf6-8f4626604271",
+    "tags": []
   },
   {
     "date": "2024-07-19",
@@ -116,12 +223,24 @@
     "time": "",
     "address": "",
     "artists": [
-      "Shelly Maye, Rosalind Lowry, Molly Wickett, Mark Lawson Bell, Liangchen Sui, Sangwon Jo, Franz Petto, Bethan Hamilto, Cemre Nomer, Chelsea Ning, Bhavani Esapathi, Alexandria Zlatar and Thasil Suhara Backer."
+      "Shelly Maye",
+      "Rosalind Lowry",
+      "Molly Wickett",
+      "Mark Lawson Bell",
+      "Liangchen Sui",
+      "Sangwon Jo",
+      "Franz Petto",
+      "Bethan Hamilto",
+      "Cemre Nomer",
+      "Chelsea Ning",
+      "Bhavani Esapathi",
+      "Alexandria Zlatar and Thasil Suhara Backer."
     ],
     "description": "In the contemporary landscape, care is an act of profound significance tied to the essence of our existence. \"Care is Art, Art is Care\" encapsulates the symbiotic relationship between artistic expression and the ethos of care. It posits that care, in all its forms—whether directed towards the environment, communities, or oneself—transcends mere action to become a form of art. Conversely, art becomes a vehicle for care, a medium through which empathy, responsibility, and interconnectedness are communicated and practiced. This exhibition explores this fluid interchange, asserting that caring for the world and its inhabitants is not only necessary but inherently creative and deeply transformative.",
-    "coverImage": "wix:image://v1/f4c0ba_d7dd7e7332f64f6fad5610749d7bdfc7~mv2.png/Care%20is%20Art%20Art%20is%20CARE%20on%2024-7-16%20at%2016.16%20(3).png#originWidth=2560&originHeight=1440",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e41f0584-3f8a-4899-a224-535b18b829d4.png",
     "archived": false,
-    "id": "7ac84258-b25a-41b1-8055-23935086f5d9"
+    "id": "7ac84258-b25a-41b1-8055-23935086f5d9",
+    "tags": []
   },
   {
     "date": "2023-03-25",
@@ -132,12 +251,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "Flavia Mazzantti, Nina Sumarac, Reza Sedghi, SueKi Yee, Wei Wu, Xinyi Wu, Yilin Zhang, Zheyuan Zhang, Ke Peng and Yueshen Wu, Ishraki Kazi, Lyndsey Walsch, Daecheon Kim, Iliana sun, Ziv Epstein, Alina Tofan, Julie Sperling, Van O, Youju Kang, Zhao Jiajing"
+      "Flavia Mazzantti",
+      "Nina Sumarac",
+      "Reza Sedghi",
+      "SueKi Yee",
+      "Wei Wu",
+      "Xinyi Wu",
+      "Yilin Zhang",
+      "Zheyuan Zhang",
+      "Ke Peng and Yueshen Wu",
+      "Ishraki Kazi",
+      "Lyndsey Walsch",
+      "Daecheon Kim",
+      "Iliana sun",
+      "Ziv Epstein",
+      "Alina Tofan",
+      "Julie Sperling",
+      "Van O",
+      "Youju Kang",
+      "Zhao Jiajing"
     ],
     "description": "Ties That Cannot Be Unbound is an online exhibition that discusses the interconnectedness of spirituality and physicality, the blurred boundaries between the living and the non-living, and the ties between our bodies and the environment. Featuring outstanding works in sound, image, film, and interaction, this exhibition responds to the question: what kinds of ties are impossible to unbind? Join us on a journey of self-discovery and collective action towards a more sustainable and harmonious future.",
-    "coverImage": "wix:image://v1/f4c0ba_b3ccc813a7404bc08c0893b7a32439c8~mv2.jpg/IMG_8534.JPG#originWidth=2560&originHeight=1190",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/acfb41db-b4ef-4348-8db4-d799fe479693.JPG",
     "archived": false,
-    "id": "3e452adb-e84a-4cc1-b883-68f39c615be4"
+    "id": "3e452adb-e84a-4cc1-b883-68f39c615be4",
+    "tags": []
   },
   {
     "date": "2025-04-07",
@@ -148,12 +286,15 @@
     "time": "",
     "address": "",
     "artists": [
-      "Alina Nazmeeva, Carrie Sijia Wang, Sutanuka Jashu"
+      "Alina Nazmeeva",
+      "Carrie Sijia Wang",
+      "Sutanuka Jashu"
     ],
     "description": "Presented by Parsons School of Design and UAAD, this panel gathers visionary artists, designers, educators, and researchers working at the forefront of AI, creativity, and ethics. As part of the Design with AI course at Parsons, panelists will present their work and engage in dialogue with students, faculty, and public attendees on how AI is reshaping artistic and design practices, the ethical dimensions of AI in creative fields, and its broader societal impact—both transformative and controversial.",
-    "coverImage": "wix:image://v1/f4c0ba_65acf523e75641e593eaf5a457b03834~mv2.jpg/BG%20Animation_1-2160x1080%20(3).jpg#originWidth=2160&originHeight=1080",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/122b87fb-2ac0-4674-8edc-c2edfd9ac314.jpg",
     "archived": false,
-    "id": "e1e18d6f-ee3f-428a-a10f-122e2dcf463b"
+    "id": "e1e18d6f-ee3f-428a-a10f-122e2dcf463b",
+    "tags": []
   },
   {
     "date": "2024-06-15",
@@ -164,12 +305,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "Adam Bialek, Amy Yoshitsu, Andy DiLallo, Ben Gasta, Cao Shu, Cezar Mocan, Dion Nataraja Ekaterina Golovko, Elena Aya Bundurakis, Huanzhe Hu, lbuki Kuramochi, Ke Peng, Luca Lee, Margaret Noble, Marina Orlova, Mu Tuan, Nic Pehkonen, Rahul Juneja, Yiou Wang, Zhou Zhou"
+      "Adam Bialek",
+      "Amy Yoshitsu",
+      "Andy DiLallo",
+      "Ben Gasta",
+      "Cao Shu",
+      "Cezar Mocan",
+      "Dion Nataraja Ekaterina Golovko",
+      "Elena Aya Bundurakis",
+      "Huanzhe Hu",
+      "lbuki Kuramochi",
+      "Ke Peng",
+      "Luca Lee",
+      "Margaret Noble",
+      "Marina Orlova",
+      "Mu Tuan",
+      "Nic Pehkonen",
+      "Rahul Juneja",
+      "Yiou Wang",
+      "Zhou Zhou"
     ],
     "description": "Matrix of the Not-Yet is an interactive 3D publication that maps twenty artistic projects across four interconnected themes: Post-human Futures, Plural Technical Agency, Decolonial Cultural Resistance, and Interconnected Feminist Ecology. Rather than presenting works as isolated outputs, it frames each as a generative node within a living matrix. The “matrix,” rooted in the Latin mater, evokes an environment that gestates new life, positioning social, technological, and ecological contexts as sites for confronting complex problems and imagining alternative futures. Viewers navigate freely, constructing meaning through their own paths.",
-    "coverImage": "wix:image://v1/f4c0ba_391f139b279d451c88ec7fdeb9c1e75e~mv2.png/3D%20Map%20(2).png#originWidth=4096&originHeight=1982",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e3274c1f-b584-494a-b5b3-1ce561f8fb94.png",
     "archived": false,
-    "id": "0e8206c1-9528-4c71-87dc-1a2cb3cf72b1"
+    "id": "0e8206c1-9528-4c71-87dc-1a2cb3cf72b1",
+    "tags": []
   },
   {
     "date": "2024-05-23",
@@ -181,9 +341,10 @@
     "address": "",
     "artists": [],
     "description": "In an era of rapid technological advancement and ecological crisis, ”Unbound Variable“ highlights the interdependence of organic and synthetic realms while challenging capitalist frameworks that commodify nature and culture. The exhibition features diverse media—digital installations, interactive art, audio-visuals, ecological interventions, etc.—that critique anthropocentric views and advocate for an alternative socio-techno-ecological landscape. By blurring the lines between physical and virtual worlds, ”Unbound Variable“ invites viewers to explore the transformative power of art beyond traditional boundaries.",
-    "coverImage": "wix:image://v1/f4c0ba_bbd0569f29ad450189fc3fd9b80ea139~mv2.jpg/06424ee5079c949ecb24b6f7eb49acf.jpg#originWidth=3731&originHeight=3979",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/f4f43d07-fee3-4558-aaeb-8a06182623b0.jpg",
     "archived": false,
-    "id": "aafcb153-1f48-466f-b4ac-a33a2a161d36"
+    "id": "aafcb153-1f48-466f-b4ac-a33a2a161d36",
+    "tags": []
   },
   {
     "date": "2025-04-05",
@@ -194,12 +355,25 @@
     "time": "",
     "address": "",
     "artists": [
-      "Jiayi Li, Audrey Chou, Jianhao Zheng, Yetong Xin, Rainee (Yunyi) Wang, Yilin Ye, Am’blance (Josie Williams, Emma Fiona Jones, Sarah Allam), LOREM, Interactive Items, Dan Gorelick, Yuj Archetype"
+      "Jiayi Li",
+      "Audrey Chou",
+      "Jianhao Zheng",
+      "Yetong Xin",
+      "Rainee (Yunyi) Wang",
+      "Yilin Ye",
+      "Am’blance (Josie Williams",
+      "Emma Fiona Jones",
+      "Sarah Allam)",
+      "LOREM",
+      "Interactive Items",
+      "Dan Gorelick",
+      "Yuj Archetype"
     ],
     "description": "Titled after the Latin for “beyond the uterus,” imagined a world unbound from biological origins or inherited narratives. The curatorial framework proposed a new genesis born not from Eden but from collapse. What emerged was a procession of hybrid creatures, mythic beings, and sensorial ruptures.",
-    "coverImage": "wix:image://v1/f4c0ba_a6b69a8e76dd454995f5b75d6b31e241~mv2.jpg/e0557ddae27db8cbf2b37f3e7665c99.jpg#originWidth=6240&originHeight=4160",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/13adcf97-ba4d-4203-b144-93befef87d0c.jpg",
     "archived": false,
-    "id": "cea80ec1-c69c-4482-a398-6b2fb2cd1629"
+    "id": "cea80ec1-c69c-4482-a398-6b2fb2cd1629",
+    "tags": []
   },
   {
     "date": "2026-01-15",
@@ -210,12 +384,14 @@
     "time": "",
     "address": "",
     "artists": [
-      "Frankfurt Helmet, Louzhang"
+      "Frankfurt Helmet",
+      "Louzhang"
     ],
     "description": "Curated by Louzhang-lz, this night brings the living, active sound of contemporary electronic music straight from Shanghai into Brooklyn.\nFrankfurt Helmet and Louzhang-lz, two close friends and radically different A/V electronic artists, stand as two distinct forces that have powerfully shaped Shanghai’s electronic music culture. Reuniting in Brooklyn on the opposite side of the planet, they deliver fresh contemporary rhythms from the Far East.",
-    "coverImage": "wix:image://v1/f4c0ba_c8e70bc7feef402d9bb21e53e78da6e1~mv2.jpg/0A1A0341.JPG#originWidth=6720&originHeight=4480",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/b1b02669-996f-40ef-bff3-8c39b3f291b0.JPG",
     "archived": false,
-    "id": "27c0fbce-d056-4514-ac80-08125ff273f4"
+    "id": "27c0fbce-d056-4514-ac80-08125ff273f4",
+    "tags": []
   },
   {
     "date": "2026-01-29",
@@ -226,12 +402,16 @@
     "time": "",
     "address": "",
     "artists": [
-      "Interactive Items, Nightshining (Michael Romeo), Entroplay (Armon Naeini), Tench Cholnoky"
+      "Interactive Items",
+      "Nightshining (Michael Romeo)",
+      "Entroplay (Armon Naeini)",
+      "Tench Cholnoky"
     ],
     "description": "Hortus Apertus, or “the garden of openness,” reimagines the garden as a site of expansiveness rather than protection. In contrast to the Hortus Conclusus, historically conceived as an enclosed sanctuary that safeguards and contains growth, this project proposes the garden as a field of relation where boundaries between the organic and synthetic, the natural and artificial, dissolve to embrace the infinite.\n\nIn this open terrain, the future is approached not as a linear projection but as a quantum field of potential. Hortus Apertus invites us to inhabit openness and emergence as generative forces, and to consider what forms of life and thought might arise when growth unfolds beyond constraint and enclosure.",
-    "coverImage": "wix:image://v1/f4c0ba_5931beae91ee467195852896156cd022~mv2.png/6577d85f6c91d7b65f6a9ec3_1%202.png#originWidth=2161&originHeight=2228",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/62ae0c83-64ec-4a65-a5fc-cd27357ea766.png",
     "archived": false,
-    "id": "4a284577-7049-4f8b-a3a5-3d6282b46d99"
+    "id": "4a284577-7049-4f8b-a3a5-3d6282b46d99",
+    "tags": []
   },
   {
     "date": "2026-08-02",
@@ -242,12 +422,19 @@
     "time": "",
     "address": "",
     "artists": [
-      "Katherine Helen Fisher, Mengna Da w/ Chienn Tai, Shihan Zhang w/ Yilin Ye, Mingyong Cheng, Han Zhang, Ziwei Liu, and Jiaye Leng"
+      "Katherine Helen Fisher",
+      "Mengna Da w/ Chienn Tai",
+      "Shihan Zhang w/ Yilin Ye",
+      "Mingyong Cheng",
+      "Han Zhang",
+      "Ziwei Liu",
+      "and Jiaye Leng"
     ],
     "description": "Through performance, interactive installations, and live generative media, (Dis)consent explores how consent, in an age of algorithms and ecological crisis, is assumed, negotiated, withdrawn, and manipulated in real time. Audiences are invited to command bodies, contribute data, reshape algorithmically generated images, and participate in speculative ecological systems.",
-    "coverImage": "wix:image://v1/f4c0ba_d8f8f7aa691c4ff0adce18c37f795cbe~mv2.png/Instagram%20post%20-%208.png#originWidth=1744&originHeight=1080",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/6822e83f-86d7-49b6-97de-f152455a55ea.png",
     "archived": false,
-    "id": "8478bf1a-2fe2-4e8f-9104-b366f33429dc"
+    "id": "8478bf1a-2fe2-4e8f-9104-b366f33429dc",
+    "tags": []
   },
   {
     "date": "2025-12-12",
@@ -258,12 +445,30 @@
     "time": "",
     "address": "",
     "artists": [
-      "Aurora Mititelu, Erin Robinson + Jamie Turner, Jackie Liu, Jonah King, Tee Topor, Ian Cox, Hiba Ali, Pearlyn Lii, Chia Amisola, Shashwath Santosh + Nithin Eluvathingal, Ian Cox, Tommy Martinez, Peter Nichols, the Cybernetics Image Library, the collective of Lois He, Vio Zhu, John Luo, Kaiyang Zhao"
+      "Aurora Mititelu",
+      "Erin Robinson + Jamie Turner",
+      "Jackie Liu",
+      "Jonah King",
+      "Tee Topor",
+      "Ian Cox",
+      "Hiba Ali",
+      "Pearlyn Lii",
+      "Chia Amisola",
+      "Shashwath Santosh + Nithin Eluvathingal",
+      "Ian Cox",
+      "Tommy Martinez",
+      "Peter Nichols",
+      "the Cybernetics Image Library",
+      "the collective of Lois He",
+      "Vio Zhu",
+      "John Luo",
+      "Kaiyang Zhao"
     ],
     "description": "Neuromantics is a one-day event on December 12 that turns a Soho loft into a playable ecosystem of artist-made games, XR works, live interfaces, and moving-image pieces. Running from 4 - 11 PM at 393 Broadway, 2nd Fl, the event builds on the structural logic found in Neuromancer, the 1984 novel by William Gibson, where meaning is shaped by how people move through networks. Neuromantics approaches this idea through gaming. Works shift, open, or change state based on human action and interaction.",
-    "coverImage": "wix:image://v1/f4c0ba_6b1be453e5f24c5ead53a7875bc45e4a~mv2.jpg/0Q8A0466.jpg#originWidth=7624&originHeight=4289",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/c2e389ba-5a21-4165-92d3-5bebf4f3f746.jpg",
     "archived": false,
-    "id": "5e634afb-e177-4831-b0a3-1456f6c668c4"
+    "id": "5e634afb-e177-4831-b0a3-1456f6c668c4",
+    "tags": []
   },
   {
     "date": "2025-01-17",
@@ -274,12 +479,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "3<3=3 (Chunlu Sheng and Xuanjie Huang), Alice Chen, Andy DiLallo and Ian Anderson, Caren Wenqing Ye and Keer Zhao, Cecil Boey and Michael Wang, Chia-hua Lee, Freddie Sanders and Chaney Manshu Diao, Huanzhe Hu, Jiatong Yao, Lois He, John Luo, Kaiyang Zhao, Kaiyang Zhao, Vio Zhu, Neonature (Kassandra Huynh and Johannes Fuchs), Parsons & Charlesworth, SENAIDA and Ricky Kapoor, Song Xin and Rosie Muhan Yuan, WanderLens Lab (Zihao Zhang and Daoxin Chen)"
+      "3<3=3 (Chunlu Sheng and Xuanjie Huang)",
+      "Alice Chen",
+      "Andy DiLallo and Ian Anderson",
+      "Caren Wenqing Ye and Keer Zhao",
+      "Cecil Boey and Michael Wang",
+      "Chia-hua Lee",
+      "Freddie Sanders and Chaney Manshu Diao",
+      "Huanzhe Hu",
+      "Jiatong Yao",
+      "Lois He",
+      "John Luo",
+      "Kaiyang Zhao",
+      "Kaiyang Zhao",
+      "Vio Zhu",
+      "Neonature (Kassandra Huynh and Johannes Fuchs)",
+      "Parsons & Charlesworth",
+      "SENAIDA and Ricky Kapoor",
+      "Song Xin and Rosie Muhan Yuan",
+      "WanderLens Lab (Zihao Zhang and Daoxin Chen)"
     ],
     "description": "Drawing on UAAD’s experience in virtual exhibitions and immersive environments, we mapped out the critical concepts in virtual world-making and transformed each into a thought-provoking prompt in our latest zine.",
-    "coverImage": "wix:image://v1/f4c0ba_a009db4ca5fa4341bbcba1f76c8168ef~mv2.png/Untitled_1-2560x1317%20(4).png#originWidth=2560&originHeight=1317",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/791769e3-1391-4f3a-b3c7-abd218ef03d5.png",
     "archived": false,
-    "id": "9c8ed784-8fb9-4a1d-b731-a239022b6919"
+    "id": "9c8ed784-8fb9-4a1d-b731-a239022b6919",
+    "tags": []
   },
   {
     "date": "2025-05-24",
@@ -291,9 +515,10 @@
     "address": "",
     "artists": [],
     "description": "​connect→collide→collab is a cross‑disciplinary matchmaking & gathering event for multimedia creators — visual artists, sound artists, performers, coders, designers, writers, curators, and those in between definitions.",
-    "coverImage": "wix:image://v1/f4c0ba_59e796ba1d934263939b49ddd055396c~mv2.jpg/corvus_visio_uaad-0198.jpg#originWidth=7728&originHeight=5152",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/899a0d1f-346f-4394-9f19-57f000f54635.jpg",
     "archived": false,
-    "id": "612d0c77-6878-483d-b3f2-ff2d38824698"
+    "id": "612d0c77-6878-483d-b3f2-ff2d38824698",
+    "tags": []
   },
   {
     "date": "2025-09-08",
@@ -304,12 +529,40 @@
     "time": "",
     "address": "",
     "artists": [
-      "Andrea Mikyska, Andy DiLallo, Carrie Sijia Wang, Munus Shih, Joaquina Salgado, Ian Anderson, Jacob Riddle, Amanda Bennetts, Florence Alwajih, K0j0 (Koi Ren, Joey Verbeke), Laura Elidedt Rodriguez, Marcos Micozzi, Hef Prentice, Mingyong Cheng, Sophia Sun, Han Zhang, Yuemeng Gu, erika, Parham Ghalamdar, Samar Younes, Shihan Zhang, Ziwei Liu, Qingxiao Zheng, Yashika Goel, Ziv Epstein, Amy Smith, Hope Schroeder"
+      "Andrea Mikyska",
+      "Andy DiLallo",
+      "Carrie Sijia Wang",
+      "Munus Shih",
+      "Joaquina Salgado",
+      "Ian Anderson",
+      "Jacob Riddle",
+      "Amanda Bennetts",
+      "Florence Alwajih",
+      "K0j0 (Koi Ren",
+      "Joey Verbeke)",
+      "Laura Elidedt Rodriguez",
+      "Marcos Micozzi",
+      "Hef Prentice",
+      "Mingyong Cheng",
+      "Sophia Sun",
+      "Han Zhang",
+      "Yuemeng Gu",
+      "erika",
+      "Parham Ghalamdar",
+      "Samar Younes",
+      "Shihan Zhang",
+      "Ziwei Liu",
+      "Qingxiao Zheng",
+      "Yashika Goel",
+      "Ziv Epstein",
+      "Amy Smith",
+      "Hope Schroeder"
     ],
     "description": "",
-    "coverImage": "wix:image://v1/f4c0ba_b159f8ba1bfb424793ed980564316d23~mv2.gif/ezgif-228240f145f0bd.gif#originWidth=800&originHeight=450",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/febe188d-bc3c-4a6a-9992-ae1165157865.gif",
     "archived": false,
-    "id": "c19cc862-a485-46a5-a09e-fa7c17fafc87"
+    "id": "c19cc862-a485-46a5-a09e-fa7c17fafc87",
+    "tags": []
   },
   {
     "date": "2026-05-08",
@@ -320,12 +573,27 @@
     "time": "",
     "address": "",
     "artists": [
-      "Sam Lavigne, Temitope Olujobi, Anna Zhang, Queenie Wu, Tina Tarighian, k0j0 (Koi Ren and Joey Verbeke), foxes, Mengna Da, Iris Xiaoyu Qu, Niles Fromm, Adam Salem, Julia Kan, Jasmine Nackash, Supernova191919, Foreseen Agency"
+      "Sam Lavigne",
+      "Temitope Olujobi",
+      "Anna Zhang",
+      "Queenie Wu",
+      "Tina Tarighian",
+      "k0j0 (Koi Ren and Joey Verbeke)",
+      "foxes",
+      "Mengna Da",
+      "Iris Xiaoyu Qu",
+      "Niles Fromm",
+      "Adam Salem",
+      "Julia Kan",
+      "Jasmine Nackash",
+      "Supernova191919",
+      "Foreseen Agency"
     ],
     "description": "​Attention // Distraction is an exhibition presented by Underground Art And Design (UAAD). It explores misplaced and mediated attention through interactive installations, net art, XR, artist-made games, live performance and artist talks.",
-    "coverImage": "wix:image://v1/f4c0ba_134028b1a0464773aa474e1ccdfe7bed~mv2.jpg/A1204560.JPG#originWidth=5760&originHeight=8640",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/5e8329d3-d511-4048-b29a-ee29cb1d7407.JPG",
     "archived": false,
-    "id": "693f0040-9c78-4b6b-96c7-6d2c7c94e319"
+    "id": "693f0040-9c78-4b6b-96c7-6d2c7c94e319",
+    "tags": []
   },
   {
     "date": "2024-10-19",
@@ -336,12 +604,34 @@
     "time": "",
     "address": "",
     "artists": [
-      "A.J. Cincotta-Eichenfield, Alexandre Vianna, Alina Nazmeeva, Angie Lin Boyer, Camilo Salas, Caren Wenqing Ye & Shiqing Chen, Cecilia Villaverde, Deven Verma, Flâneuse du Mal, Hong Huo, Candice Wu, Juan Wamoo Alvarez, Ker Chen, SPLACES.STUDIO, Mu Tuan, Rachel TonThat, Victoria Cheredeeva, Schuyler Dragoo, Seitaro Yamazaki, Sutanuka Jashu, Tiffany Wei, Vidmina Stasiulyte"
+      "A.J. Cincotta-Eichenfield",
+      "Alexandre Vianna",
+      "Alina Nazmeeva",
+      "Angie Lin Boyer",
+      "Camilo Salas",
+      "Caren Wenqing Ye & Shiqing Chen",
+      "Cecilia Villaverde",
+      "Deven Verma",
+      "Flâneuse du Mal",
+      "Hong Huo",
+      "Candice Wu",
+      "Juan Wamoo Alvarez",
+      "Ker Chen",
+      "SPLACES.STUDIO",
+      "Mu Tuan",
+      "Rachel TonThat",
+      "Victoria Cheredeeva",
+      "Schuyler Dragoo",
+      "Seitaro Yamazaki",
+      "Sutanuka Jashu",
+      "Tiffany Wei",
+      "Vidmina Stasiulyte"
     ],
     "description": "As part of our 2024 Art Festival and two-year anniversary celebration, we invited artists, avant-garde practitioners, and visionaries to join our \"Jukebox of Dissonance.\" Here, subversive art and pioneering ideas flow like electric currents, with minds clashing and merging in creative chaos to birth the power of innovation. In this carefully curated jukebox, including a virtual exhibition, in-person artist talks and performances, we mix genres, shatter norms, and awaken slumbering senses through this event.",
-    "coverImage": "wix:image://v1/f4c0ba_9569918611884886a02e55a80c372e08~mv2.png/c23ce5d7ecced3e1bdb450c5d1afe85.png#originWidth=2560&originHeight=1351",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/fd5d16cc-c06c-4932-896c-14e7065d257a.png",
     "archived": false,
-    "id": "88da725b-0432-4c63-945f-206283b22350"
+    "id": "88da725b-0432-4c63-945f-206283b22350",
+    "tags": []
   },
   {
     "date": "2025-09-19",
@@ -352,12 +642,21 @@
     "time": "",
     "address": "",
     "artists": [
-      "Carrie Sijia Wang, Luca Lee, Munus Shih, Interactive Items, Mason Youngblood, Joaquina Salgado, Jazsalyn, Dominika Čupková, Zivvy Epstein"
+      "Carrie Sijia Wang",
+      "Luca Lee",
+      "Munus Shih",
+      "Interactive Items",
+      "Mason Youngblood",
+      "Joaquina Salgado",
+      "Jazsalyn",
+      "Dominika Čupková",
+      "Zivvy Epstein"
     ],
     "description": "Technomirage is an event series exploring how artists might use emerging technologies such as AI to challenge the supposed inevitability of replacement and threat. Rather than positioning AI as something to fear, the series frames it as a site for agency, critical engagement, and ethical questioning. It asks how we might participate in shaping technological futures and collectively examine what is right and good within society.",
-    "coverImage": "wix:image://v1/f4c0ba_ac27550925574764b8e432fa947b48f2~mv2.png/Background%20Image.png#originWidth=1792&originHeight=2688",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/d587dfac-b17e-47b8-bc29-8bc107d043fc.png",
     "archived": false,
-    "id": "269adf37-a97e-4392-a967-7ee5149fc8b9"
+    "id": "269adf37-a97e-4392-a967-7ee5149fc8b9",
+    "tags": []
   },
   {
     "date": "2024-05-23",
@@ -369,9 +668,10 @@
     "address": "",
     "artists": [],
     "description": "In an era of rapid technological advancement and ecological crisis, ”Unbound Variable“ highlights the interdependence of organic and synthetic realms while challenging capitalist frameworks that commodify nature and culture. The exhibition features diverse media—digital installations, interactive art, audio-visuals, ecological interventions, etc.—that critique anthropocentric views and advocate for an alternative socio-techno-ecological landscape. By blurring the lines between physical and virtual worlds, ”Unbound Variable“ invites viewers to explore the transformative power of art beyond traditional boundaries.",
-    "coverImage": "wix:image://v1/f4c0ba_b5cf1749c0fc45e18d04510af88b08ed~mv2.jpg/ef37ba089cdba8fb47e800bdc4df801b%202.JPG#originWidth=2560&originHeight=1282",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/a6379a15-43f2-47c2-894f-6e017eabbcca.JPG",
     "archived": false,
-    "id": "0d354541-bb0d-4888-9dc4-88abda404d84"
+    "id": "0d354541-bb0d-4888-9dc4-88abda404d84",
+    "tags": []
   },
   {
     "date": "2025-10-30",
@@ -382,11 +682,15 @@
     "time": "",
     "address": "",
     "artists": [
-      "Andrew Dong Deng, Audrey Chou, Interactive Items, Yiou Wang"
+      "Andrew Dong Deng",
+      "Audrey Chou",
+      "Interactive Items",
+      "Yiou Wang"
     ],
     "description": "An evening of conversation, speculation, and creative play.\n\nA gathering of artists, designers, and technologists, thought leaders tracing how generative media reshapes the act and the meaning of making together.\n\nThis is a living experiment. A discourse on futures before they arrive. A space to question how creativity, culture, and technology entwine;\nto hold what feels both urgent and unfinished. To stretch the edges of what we call art, design, and expression.\n\nAfter the discussion, we are hosting an afterparty to celebrate.\nFriends, family, and lovers of FLORA — join us for the afterparty.",
-    "coverImage": "wix:image://v1/f4c0ba_1a1b21692e4e442e91612d622a24c5ac~mv2.jpg/_S6A1223.jpg#originWidth=5760&originHeight=3840",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e691fd91-f040-449e-b48e-e15940451585.jpg",
     "archived": false,
-    "id": "24a64838-c5e2-4cb4-97fd-1b1987af8cd8"
+    "id": "24a64838-c5e2-4cb4-97fd-1b1987af8cd8",
+    "tags": []
   }
 ]
