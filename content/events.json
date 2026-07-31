@@ -81,12 +81,25 @@
     "time": "",
     "address": "",
     "artists": [
-      "MF Clarke, ZYKR, Matthew D Gantt, Nsyme × Andalu & Rob Interface, c03ra, Skulptor, IKYA, GORZ (sound with m preis), Tanky, Ruipeng Wang, pppunko (sound by KEIU / Raven), Lin Feng (sound by Raven), Jessie Han (sound by Bobi & Fliko)"
+      "MF Clarke",
+      "ZYKR",
+      "Matthew D Gantt",
+      "Nsyme × Andalu & Rob Interface",
+      "c03ra",
+      "Skulptor",
+      "IKYA",
+      "GORZ (sound with m preis)",
+      "Tanky",
+      "Ruipeng Wang",
+      "pppunko (sound by KEIU / Raven)",
+      "Lin Feng (sound by Raven)",
+      "Jessie Han (sound by Bobi & Fliko)"
     ],
     "description": "To drift is to move without fixed coordinates. To encounter others in transit. To remain suspended between geographies, languages, temporalities, and systems both natural and artificial.\n\nWorlds Adrift gathers artists from different parts of the world to construct an ephemeral environment of frequencies, ruptures, textures, and echoes, where images breathe, sound mutates, and worlds briefly overlap before dissolving again.\n\nThe event is co-organized by Creative Code Art and Underground Art and Design (UAAD), two NYC-based platforms supporting artists working with technology as materials, methods, and sites of inquiry.",
-    "coverImage": "wix:image://v1/f4c0ba_3fa4c95efbbe40aea717b4554354be6a~mv2.jpg/A1205055.JPG#originWidth=8640&originHeight=5760",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/07971945-37cc-465c-a163-43fee672b1b4.JPG",
     "archived": false,
-    "id": "f57e4762-0bfc-45fc-a3a6-a632bb564966"
+    "id": "f57e4762-0bfc-45fc-a3a6-a632bb564966",
+    "tags": []
   },
   {
     "date": "2023-12-19",
