@@ -29,10 +29,13 @@ type FormState = {
   location: string;
   title: string;
   organizers: string;
+  coOrganizedWith: string;
   time: string;
   address: string;
   artists: string;
   description: string;
+  tags: string;
+  url: string;
 };
 
 function emptyForm(): FormState {
@@ -41,10 +44,13 @@ function emptyForm(): FormState {
     location: "",
     title: "",
     organizers: "",
+    coOrganizedWith: "",
     time: "",
     address: "",
     artists: "",
     description: "",
+    tags: "",
+    url: "",
   };
 }
 
@@ -54,10 +60,13 @@ function formFromEvent(ev: EventItem): FormState {
     location: ev.location,
     title: ev.title,
     organizers: ev.organizers,
+    coOrganizedWith: ev.coOrganizedWith ?? "",
     time: ev.time,
     address: ev.address,
     artists: ev.artists.join(", "),
     description: ev.description,
+    tags: (ev.tags ?? []).join(", "),
+    url: ev.url ?? "",
   };
 }
 
@@ -169,12 +178,15 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         location: form.location,
         title: form.title,
         organizers: form.organizers,
+        coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
         address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
         archived: false,
+        tags: form.tags.split(",").map((s) => s.trim()).filter(Boolean),
+        url: form.url.trim() || undefined,
       },
       token
     );
@@ -198,11 +210,14 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         location: form.location,
         title: form.title,
         organizers: form.organizers,
+        coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
         address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
+        tags: form.tags.split(",").map((s) => s.trim()).filter(Boolean),
+        url: form.url.trim() || undefined,
       },
       token
     );
@@ -400,12 +415,20 @@ function EventForm({
         placeholder="Title"
         className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
       />
-      <input
-        value={form.organizers}
-        onChange={(e) => setForm({ ...form, organizers: e.target.value })}
-        placeholder="Organizers"
-        className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
-      />
+      <div className="grid grid-cols-2 gap-3">
+        <input
+          value={form.organizers}
+          onChange={(e) => setForm({ ...form, organizers: e.target.value })}
+          placeholder="Organizers"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+        <input
+          value={form.coOrganizedWith}
+          onChange={(e) => setForm({ ...form, coOrganizedWith: e.target.value })}
+          placeholder="Co-organized with (optional)"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+      </div>
       <div className="grid grid-cols-2 gap-3">
         <input
           value={form.time}
@@ -433,6 +456,20 @@ function EventForm({
         rows={3}
         className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
       />
+      <div className="grid grid-cols-2 gap-3">
+        <input
+          value={form.tags}
+          onChange={(e) => setForm({ ...form, tags: e.target.value })}
+          placeholder="Tags (comma separated)"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+        <input
+          value={form.url}
+          onChange={(e) => setForm({ ...form, url: e.target.value })}
+          placeholder="Link (tickets, info, Instagram post...)"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+      </div>
 
       <div className="flex items-center gap-3">
         {previewImage && (
@@ -531,20 +568,22 @@ function BulkImportCsv({
       {open && (
         <>
           <p className="text-xs text-white/40">
-            Columns: <code className="text-white/60">date</code> (YYYY-MM-DD),{" "}
+            Columns: <code className="text-white/60">Title</code>,{" "}
+            <code className="text-white/60">Date</code> (YYYY-MM-DD),{" "}
+            <code className="text-white/60">Tags</code> (semicolon-separated),{" "}
             <code className="text-white/60">location</code>,{" "}
-            <code className="text-white/60">title</code>,{" "}
-            <code className="text-white/60">organizers</code>,{" "}
-            <code className="text-white/60">time</code>,{" "}
-            <code className="text-white/60">address</code>,{" "}
-            <code className="text-white/60">artists</code> (semicolon-separated),{" "}
-            <code className="text-white/60">description</code>,{" "}
-            <code className="text-white/60">coverImage</code> (a URL — CSV can&apos;t
-            carry image files, so this must link to an already-hosted image; leave
-            blank and add a photo later by editing the event), and{" "}
-            <code className="text-white/60">archived</code> (true/false, optional).
-            Only date, location, and title are required — rows missing those are
+            <code className="text-white/60">intro</code> (the event description),{" "}
+            <code className="text-white/60">URL</code> (link to tickets/info/a post),{" "}
+            <code className="text-white/60">cover</code> (a URL — CSV can&apos;t carry
+            image files, so this must link to an already-hosted image; leave blank and
+            add a photo later by editing the event),{" "}
+            <code className="text-white/60">archive</code> (true/false, optional), and{" "}
+            <code className="text-white/60">Co-organized with</code> (optional).
+            Only Title, Date, and location are required — rows missing those are
             skipped and listed below rather than blocking the whole import.
+            (<code className="text-white/60">organizers</code> and{" "}
+            <code className="text-white/60">artists</code> also work as columns if
+            you have that info, semicolon-separated for artists.)
           </p>
 
           <div className="flex flex-wrap items-center gap-3">

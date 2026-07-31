@@ -11,4 +11,7 @@ export interface EventItem {
   description: string;
   coverImage: string;
   archived?: boolean;
+  tags?: string[];
+  url?: string; // link to more info, tickets, an Instagram post, etc.
+  coOrganizedWith?: string; // secondary/partner organizer, separate from `organizers`
 }

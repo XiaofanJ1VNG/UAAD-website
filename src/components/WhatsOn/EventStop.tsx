@@ -94,7 +94,7 @@ export default function EventStop({
       <motion.div layout transition={TRANSITION} className="relative h-24 w-full flex-shrink-0">
         <div
           className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
-          style={{ backgroundColor: lineColor, opacity: 0.5, height: DOT_SIZE }}
+          style={{ backgroundColor: lineColor, height: DOT_SIZE }}
         />
         {/* The dot is split into a plain OUTER div that does the static
             "-translate-y-1/2" centering, with the `layout` motion.div

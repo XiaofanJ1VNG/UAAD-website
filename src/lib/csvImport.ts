@@ -15,13 +15,20 @@ function displayDateFrom(dateStr: string): string {
 
 // Only these three are required — everything else can be blank and gets
 // filled with a sensible empty default, so a rough CSV of old events
-// (which might be missing organizers/time/address for some rows) still
-// imports instead of failing outright.
+// (which might be missing some columns for some rows) still imports
+// instead of failing outright.
 const REQUIRED = ["date", "location", "title"] as const;
 
-// Header matching is case/whitespace-insensitive (transformHeader below),
-// so "CoverImage", "cover image"... no — keep it simple and exact per the
-// template, just tolerant of case and stray spaces around the name.
+function splitList(value: string | undefined): string[] {
+  return (value ?? "")
+    .split(";")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+// Header matching is case/whitespace-insensitive (transformHeader below).
+// A couple of columns accept either name so older CSVs (or the original
+// template) keep working alongside the current column names.
 export function parseEventsCsv(csvText: string): CsvImportResult {
   const parsed = Papa.parse<Record<string, string>>(csvText, {
     header: true,
@@ -57,24 +64,24 @@ export function parseEventsCsv(csvText: string): CsvImportResult {
       organizers: row.organizers?.trim() ?? "",
       time: row.time?.trim() ?? "",
       address: row.address?.trim() ?? "",
-      artists: (row.artists ?? "")
-        .split(";")
-        .map((s) => s.trim())
-        .filter(Boolean),
-      description: row.description?.trim() ?? "",
+      artists: splitList(row.artists),
+      // "intro" is the current column name; "description" still works too.
+      description: (row.intro ?? row.description ?? "").trim(),
       // CSV cells can only hold text, so images can't travel through a
-      // CSV directly — this column should be a URL to an already-hosted
-      // image (e.g. from your old Wix site, or a link you've uploaded
-      // elsewhere). Leaving it blank is fine; you can add a cover image
+      // CSV directly — "cover" (or "coverimage") should be a URL to an
+      // already-hosted image. Leaving it blank is fine; add a photo
       // later by editing that event individually.
-      coverImage: row.coverimage?.trim() ?? "",
-      archived: /^true$/i.test((row.archived ?? "").trim()),
+      coverImage: (row.cover ?? row.coverimage ?? "").trim(),
+      archived: /^true$/i.test((row.archive ?? row.archived ?? "").trim()),
+      tags: splitList(row.tags),
+      url: row.url?.trim() || undefined,
+      coOrganizedWith: row["co-organized with"]?.trim() || row.coorganizedwith?.trim() || undefined,
     });
   });
 
   return { events, errors };
 }
 
-export const CSV_TEMPLATE = `date,location,title,organizers,time,address,artists,description,coverImage,archived
-2025-03-14,NYC,Ghosts in the Feedback Loop,UAAD,7:00 PM - 11:00 PM,"The Shed, 545 W 30th St, New York, NY",k0j0; Amanda Bennetts; Florence Alwajih,A virtual exhibition exploring algorithmic systems.,https://example.com/flyer.jpg,false
+export const CSV_TEMPLATE = `Title,Date,Tags,location,intro,URL,cover,archive,Co-organized with
+Ghosts in the Feedback Loop,2025-03-14,exhibition; net art,NYC,A virtual exhibition exploring algorithmic systems.,https://example.com/event-page,https://example.com/flyer.jpg,false,Creative Code Art
 `;
