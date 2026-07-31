@@ -153,12 +153,17 @@
     "time": "",
     "address": "",
     "artists": [
-      "Moon Davé, elekhlekha อีเหละเขละขละ, Torin Blankensmith, Dan Gorelick, Reckoner"
+      "Moon Davé",
+      "elekhlekha อีเหละเขละขละ",
+      "Torin Blankensmith",
+      "Dan Gorelick",
+      "Reckoner"
     ],
     "description": "For our third anniversary, we partnered with the Processing Foundation and Artifice for an evening of talks and audiovisual performances that challenged normative structures through experimental sound and critical uses of technology.",
-    "coverImage": "wix:image://v1/f4c0ba_e8321a573e054386a7ad5ce1ac5f9b9c~mv2.jpeg/DSCF4593.jpeg#originWidth=5152&originHeight=7728",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/07870f61-6b9e-4d60-a70c-f26eb24f4de1.jpeg",
     "archived": false,
-    "id": "96118389-04ad-412e-961a-8977c612abbd"
+    "id": "96118389-04ad-412e-961a-8977c612abbd",
+    "tags": []
   },
   {
     "date": "2026-01-14",
