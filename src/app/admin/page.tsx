@@ -15,8 +15,6 @@ import {
   deleteEvent,
   uploadCoverImage,
   bulkAddEvents,
-  replaceAllEvents,
-  bulkAssignCoverImages,
 } from "@/lib/eventsStore";
 import { parseEventsCsv, CSV_TEMPLATE, CsvImportResult } from "@/lib/csvImport";
 import { GITHUB_OWNER, GITHUB_REPO } from "@/lib/githubConfig";
@@ -33,6 +31,7 @@ type FormState = {
   organizers: string;
   coOrganizedWith: string;
   time: string;
+  address: string;
   artists: string;
   description: string;
   tags: string;
@@ -47,6 +46,7 @@ function emptyForm(): FormState {
     organizers: "",
     coOrganizedWith: "",
     time: "",
+    address: "",
     artists: "",
     description: "",
     tags: "",
@@ -62,6 +62,7 @@ function formFromEvent(ev: EventItem): FormState {
     organizers: ev.organizers,
     coOrganizedWith: ev.coOrganizedWith ?? "",
     time: ev.time,
+    address: ev.address,
     artists: ev.artists.join(", "),
     description: ev.description,
     tags: (ev.tags ?? []).join(", "),
@@ -179,6 +180,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         organizers: form.organizers,
         coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
+        address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
@@ -210,6 +212,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         organizers: form.organizers,
         coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
+        address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
@@ -249,8 +252,6 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
       </div>
 
       <BulkImportCsv token={token} onImported={setEvents} />
-
-      <BulkImageUpload token={token} events={events ?? []} onAssigned={setEvents} />
 
       {editingEvent ? (
         <EventForm
@@ -353,6 +354,10 @@ function EventForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!form.date || !form.location || !form.title) {
+      setError("Date, location, and title are required.");
+      return;
+    }
     setSaving(true);
     setError(null);
     try {
@@ -424,12 +429,20 @@ function EventForm({
           className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
         />
       </div>
-      <input
-        value={form.time}
-        onChange={(e) => setForm({ ...form, time: e.target.value })}
-        placeholder="Time (optional, e.g. 7:00 PM – 11:00 PM)"
-        className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
-      />
+      <div className="grid grid-cols-2 gap-3">
+        <input
+          value={form.time}
+          onChange={(e) => setForm({ ...form, time: e.target.value })}
+          placeholder="Time (e.g. 7:00 PM – 11:00 PM)"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+        <input
+          value={form.address}
+          onChange={(e) => setForm({ ...form, address: e.target.value })}
+          placeholder="Address"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+      </div>
       <input
         value={form.artists}
         onChange={(e) => setForm({ ...form, artists: e.target.value })}
@@ -507,7 +520,6 @@ function BulkImportCsv({
   const [importing, setImporting] = useState(false);
   const [result, setResult] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
-  const [replaceMode, setReplaceMode] = useState(false);
 
   async function handleFile(file: File) {
     const text = await file.text();
@@ -517,24 +529,12 @@ function BulkImportCsv({
 
   async function handleImport() {
     if (!preview || preview.events.length === 0) return;
-    if (replaceMode) {
-      const ok = confirm(
-        `This will DELETE every existing event and replace it with these ${preview.events.length} from the CSV. This can't be undone. Continue?`
-      );
-      if (!ok) return;
-    }
     setImporting(true);
     setResult(null);
     try {
-      const next = replaceMode
-        ? await replaceAllEvents(preview.events, token)
-        : await bulkAddEvents(preview.events, token);
+      const next = await bulkAddEvents(preview.events, token);
       onImported(next);
-      setResult(
-        replaceMode
-          ? `Replaced all events with ${preview.events.length} from the CSV.`
-          : `Imported ${preview.events.length} event${preview.events.length === 1 ? "" : "s"}.`
-      );
+      setResult(`Imported ${preview.events.length} event${preview.events.length === 1 ? "" : "s"}.`);
       setPreview(null);
     } catch (err: any) {
       setResult(`Import failed: ${err.message}`);
@@ -568,24 +568,22 @@ function BulkImportCsv({
       {open && (
         <>
           <p className="text-xs text-white/40">
-            Columns: <code className="text-white/60">date</code> (YYYY-MM-DD),{" "}
+            Columns: <code className="text-white/60">Title</code>,{" "}
+            <code className="text-white/60">Date</code> (YYYY-MM-DD),{" "}
+            <code className="text-white/60">Tags</code> (semicolon-separated),{" "}
             <code className="text-white/60">location</code>,{" "}
-            <code className="text-white/60">title</code>,{" "}
-            <code className="text-white/60">co-organizers</code> (a partner org, optional),{" "}
-            <code className="text-white/60">Tags</code> (comma-separated, or a{" "}
-            <code className="text-white/60">[&quot;like&quot;,&quot;this&quot;]</code>{" "}
-            list if that&apos;s how your export formats it),{" "}
-            <code className="text-white/60">time</code> (optional — leave blank and
-            the site shows just the date),{" "}
-            <code className="text-white/60">Url</code> (link to tickets/info/a post),{" "}
-            <code className="text-white/60">artists</code> (comma-separated),{" "}
-            <code className="text-white/60">Curator</code> (the main organizer credit),{" "}
-            <code className="text-white/60">description</code>, <code className="text-white/60">coverImage</code>{" "}
-            (must be a real http(s) URL — internal references like{" "}
-            <code className="text-white/60">wix:image://...</code> won&apos;t load on the
-            live site, so those rows import without a photo; add one later by editing
-            the event), and <code className="text-white/60">archived</code> (true/false,
-            optional). Nothing is required — blank cells just import empty.
+            <code className="text-white/60">intro</code> (the event description),{" "}
+            <code className="text-white/60">URL</code> (link to tickets/info/a post),{" "}
+            <code className="text-white/60">cover</code> (a URL — CSV can&apos;t carry
+            image files, so this must link to an already-hosted image; leave blank and
+            add a photo later by editing the event),{" "}
+            <code className="text-white/60">archive</code> (true/false, optional), and{" "}
+            <code className="text-white/60">Co-organized with</code> (optional).
+            Only Title, Date, and location are required — rows missing those are
+            skipped and listed below rather than blocking the whole import.
+            (<code className="text-white/60">organizers</code> and{" "}
+            <code className="text-white/60">artists</code> also work as columns if
+            you have that info, semicolon-separated for artists.)
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -627,16 +625,6 @@ function BulkImportCsv({
                   ))}
                 </ul>
               )}
-              <label className="flex items-center gap-2 text-xs text-white/60">
-                <input
-                  type="checkbox"
-                  checked={replaceMode}
-                  onChange={(e) => setReplaceMode(e.target.checked)}
-                />
-                Replace ALL existing events with this CSV (use this to re-import and fix
-                events that came in wrong the first time — otherwise this adds to what&apos;s
-                already there)
-              </label>
               <div className="flex gap-3">
                 <button
                   type="button"
@@ -644,11 +632,7 @@ function BulkImportCsv({
                   disabled={importing || preview.events.length === 0}
                   className="rounded-lg bg-accent px-3 py-2 text-xs font-medium text-ink disabled:opacity-50"
                 >
-                  {importing
-                    ? "Importing..."
-                    : replaceMode
-                    ? `Replace all with these ${preview.events.length}`
-                    : `Import ${preview.events.length} events`}
+                  {importing ? "Importing..." : `Import ${preview.events.length} events`}
                 </button>
                 <button
                   type="button"
@@ -657,195 +641,6 @@ function BulkImportCsv({
                 >
                   Cancel
                 </button>
-              </div>
-            </div>
-          )}
-
-          {result && <p className="text-xs text-white/60">{result}</p>}
-        </>
-      )}
-    </div>
-  );
-}
-
-interface PendingImage {
-  key: string;
-  file: File;
-  previewUrl: string;
-  eventId: string;
-}
-
-// Uploads N image files and matches each to an existing event via a manual
-// dropdown (Wix's exported filenames are cryptic and can't be reliably
-// auto-matched to a title), then writes all the resulting coverImage URLs
-// back in a single combined commit via bulkAssignCoverImages.
-function BulkImageUpload({
-  token,
-  events,
-  onAssigned,
-}: {
-  token: string;
-  events: EventItem[];
-  onAssigned: (events: EventItem[]) => void;
-}) {
-  const [pending, setPending] = useState<PendingImage[]>([]);
-  const [uploading, setUploading] = useState(false);
-  const [result, setResult] = useState<string | null>(null);
-  const [open, setOpen] = useState(false);
-
-  const missingCover = events.filter((e) => !e.coverImage);
-
-  function handleFiles(files: FileList) {
-    const additions: PendingImage[] = Array.from(files).map((file) => ({
-      key: `${file.name}-${file.size}-${Math.random()}`,
-      file,
-      previewUrl: URL.createObjectURL(file),
-      eventId: "",
-    }));
-    setPending((cur) => [...cur, ...additions]);
-    setResult(null);
-  }
-
-  function updateAssignment(key: string, eventId: string) {
-    setPending((cur) => cur.map((p) => (p.key === key ? { ...p, eventId } : p)));
-  }
-
-  function removePending(key: string) {
-    setPending((cur) => cur.filter((p) => p.key !== key));
-  }
-
-  const readyCount = pending.filter((p) => p.eventId).length;
-
-  async function handleUploadAll() {
-    const assigned = pending.filter((p) => p.eventId);
-    if (assigned.length === 0) return;
-    setUploading(true);
-    setResult(null);
-    try {
-      // Uploads happen one at a time (each is its own GitHub write to
-      // content/uploads/), but the events.json update itself is a single
-      // combined write at the end via bulkAssignCoverImages.
-      const assignments: { id: string; coverImage: string }[] = [];
-      for (const p of assigned) {
-        const url = await uploadCoverImage(p.file, token);
-        assignments.push({ id: p.eventId, coverImage: url });
-      }
-      const next = await bulkAssignCoverImages(assignments, token);
-      onAssigned(next);
-      setResult(
-        `Uploaded and assigned ${assignments.length} image${assignments.length === 1 ? "" : "s"}.`
-      );
-      setPending((cur) => cur.filter((p) => !p.eventId));
-    } catch (err: any) {
-      setResult(`Upload failed: ${err.message}`);
-    } finally {
-      setUploading(false);
-    }
-  }
-
-  return (
-    <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        className="flex items-center justify-between text-left"
-      >
-        <span className="text-sm font-semibold text-white/70">
-          Bulk upload cover images {open ? "▲" : "▼"}
-        </span>
-      </button>
-
-      {open && (
-        <>
-          <p className="text-xs text-white/40">
-            Pick several image files at once, then match each one to the event it
-            belongs to using its dropdown — filenames from a CSV export are too
-            cryptic to match automatically.
-            {missingCover.length > 0 && (
-              <>
-                {" "}
-                Currently <span className="text-white/70">{missingCover.length}</span>{" "}
-                event{missingCover.length === 1 ? "" : "s"}{" "}
-                {missingCover.length === 1 ? "has" : "have"} no cover image.
-              </>
-            )}
-          </p>
-
-          <label className="flex w-fit cursor-pointer items-center gap-3 text-sm text-white/60">
-            <span className="rounded-lg border border-white/15 px-3 py-2">
-              Choose image files
-            </span>
-            <input
-              type="file"
-              accept="image/*"
-              multiple
-              className="hidden"
-              onChange={(e) => {
-                if (e.target.files && e.target.files.length > 0) handleFiles(e.target.files);
-                e.target.value = "";
-              }}
-            />
-          </label>
-
-          {pending.length > 0 && (
-            <div className="flex flex-col gap-2">
-              {pending.map((p) => (
-                <div
-                  key={p.key}
-                  className="flex items-center gap-3 rounded-lg border border-white/10 p-2"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={p.previewUrl}
-                    alt=""
-                    className="h-12 w-12 flex-shrink-0 rounded-lg object-cover"
-                  />
-                  <p
-                    className="flex-shrink-0 truncate text-xs text-white/50"
-                    style={{ maxWidth: 120 }}
-                  >
-                    {p.file.name}
-                  </p>
-                  <select
-                    value={p.eventId}
-                    onChange={(e) => updateAssignment(p.key, e.target.value)}
-                    className="min-w-0 flex-1 rounded-lg border border-white/15 bg-ink px-2 py-1.5 text-xs text-white outline-none focus:border-accent"
-                  >
-                    <option value="">— select event —</option>
-                    {events.map((ev) => (
-                      <option key={ev.id} value={ev.id}>
-                        {ev.displayDate ? `${ev.displayDate} — ` : ""}
-                        {ev.title || "(untitled)"}
-                        {ev.coverImage ? " (has cover)" : ""}
-                      </option>
-                    ))}
-                  </select>
-                  <button
-                    type="button"
-                    onClick={() => removePending(p.key)}
-                    className="flex-shrink-0 text-xs text-white/40 hover:text-white"
-                  >
-                    Remove
-                  </button>
-                </div>
-              ))}
-
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  onClick={handleUploadAll}
-                  disabled={uploading || readyCount === 0}
-                  className="rounded-lg bg-accent px-3 py-2 text-xs font-medium text-ink disabled:opacity-50"
-                >
-                  {uploading
-                    ? "Uploading..."
-                    : `Upload & assign ${readyCount || ""} image${readyCount === 1 ? "" : "s"}`}
-                </button>
-                {pending.length > readyCount && (
-                  <span className="text-xs text-white/40">
-                    {pending.length - readyCount} not yet matched to an event
-                  </span>
-                )}
               </div>
             </div>
           )}
