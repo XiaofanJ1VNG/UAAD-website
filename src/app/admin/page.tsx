@@ -31,6 +31,7 @@ type FormState = {
   organizers: string;
   coOrganizedWith: string;
   time: string;
+  address: string;
   artists: string;
   description: string;
   tags: string;
@@ -45,6 +46,7 @@ function emptyForm(): FormState {
     organizers: "",
     coOrganizedWith: "",
     time: "",
+    address: "",
     artists: "",
     description: "",
     tags: "",
@@ -60,6 +62,7 @@ function formFromEvent(ev: EventItem): FormState {
     organizers: ev.organizers,
     coOrganizedWith: ev.coOrganizedWith ?? "",
     time: ev.time,
+    address: ev.address,
     artists: ev.artists.join(", "),
     description: ev.description,
     tags: (ev.tags ?? []).join(", "),
@@ -177,6 +180,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         organizers: form.organizers,
         coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
+        address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
@@ -208,6 +212,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         organizers: form.organizers,
         coOrganizedWith: form.coOrganizedWith.trim() || undefined,
         time: form.time,
+        address: form.address,
         artists: form.artists.split(",").map((s) => s.trim()).filter(Boolean),
         description: form.description,
         coverImage,
@@ -349,6 +354,10 @@ function EventForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!form.date || !form.location || !form.title) {
+      setError("Date, location, and title are required.");
+      return;
+    }
     setSaving(true);
     setError(null);
     try {
@@ -420,12 +429,20 @@ function EventForm({
           className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
         />
       </div>
-      <input
-        value={form.time}
-        onChange={(e) => setForm({ ...form, time: e.target.value })}
-        placeholder="Time (optional, e.g. 7:00 PM – 11:00 PM)"
-        className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
-      />
+      <div className="grid grid-cols-2 gap-3">
+        <input
+          value={form.time}
+          onChange={(e) => setForm({ ...form, time: e.target.value })}
+          placeholder="Time (e.g. 7:00 PM – 11:00 PM)"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+        <input
+          value={form.address}
+          onChange={(e) => setForm({ ...form, address: e.target.value })}
+          placeholder="Address"
+          className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none focus:border-accent"
+        />
+      </div>
       <input
         value={form.artists}
         onChange={(e) => setForm({ ...form, artists: e.target.value })}
@@ -551,24 +568,22 @@ function BulkImportCsv({
       {open && (
         <>
           <p className="text-xs text-white/40">
-            Columns: <code className="text-white/60">date</code> (YYYY-MM-DD),{" "}
+            Columns: <code className="text-white/60">Title</code>,{" "}
+            <code className="text-white/60">Date</code> (YYYY-MM-DD),{" "}
+            <code className="text-white/60">Tags</code> (semicolon-separated),{" "}
             <code className="text-white/60">location</code>,{" "}
-            <code className="text-white/60">title</code>,{" "}
-            <code className="text-white/60">co-organizers</code> (a partner org, optional),{" "}
-            <code className="text-white/60">Tags</code> (comma-separated, or a{" "}
-            <code className="text-white/60">[&quot;like&quot;,&quot;this&quot;]</code>{" "}
-            list if that&apos;s how your export formats it),{" "}
-            <code className="text-white/60">time</code> (optional — leave blank and
-            the site shows just the date),{" "}
-            <code className="text-white/60">Url</code> (link to tickets/info/a post),{" "}
-            <code className="text-white/60">artists</code> (comma-separated),{" "}
-            <code className="text-white/60">Curator</code> (the main organizer credit),{" "}
-            <code className="text-white/60">description</code>, <code className="text-white/60">coverImage</code>{" "}
-            (must be a real http(s) URL — internal references like{" "}
-            <code className="text-white/60">wix:image://...</code> won&apos;t load on the
-            live site, so those rows import without a photo; add one later by editing
-            the event), and <code className="text-white/60">archived</code> (true/false,
-            optional). Nothing is required — blank cells just import empty.
+            <code className="text-white/60">intro</code> (the event description),{" "}
+            <code className="text-white/60">URL</code> (link to tickets/info/a post),{" "}
+            <code className="text-white/60">cover</code> (a URL — CSV can&apos;t carry
+            image files, so this must link to an already-hosted image; leave blank and
+            add a photo later by editing the event),{" "}
+            <code className="text-white/60">archive</code> (true/false, optional), and{" "}
+            <code className="text-white/60">Co-organized with</code> (optional).
+            Only Title, Date, and location are required — rows missing those are
+            skipped and listed below rather than blocking the whole import.
+            (<code className="text-white/60">organizers</code> and{" "}
+            <code className="text-white/60">artists</code> also work as columns if
+            you have that info, semicolon-separated for artists.)
           </p>
 
           <div className="flex flex-wrap items-center gap-3">

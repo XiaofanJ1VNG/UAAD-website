@@ -12,6 +12,7 @@ export const EVENTS: EventItem[] = [
     title: "Ghosts in the Feedback Loop",
     organizers: "UAAD",
     time: "7:00 PM – 11:00 PM",
+    address: "The Shed, 545 W 30th St, New York, NY",
     artists: ["k0j0", "Amanda Bennetts", "Florence Alwajih"],
     description:
       "A virtual exhibition that invites artists to work inside the cracks — treating algorithmic systems not as endpoints of automation but as haunted infrastructures alive with memory, loss, and rebellion.",
@@ -25,6 +26,7 @@ export const EVENTS: EventItem[] = [
     title: "Neuromantics",
     organizers: "UAAD x Creative Code Art",
     time: "6:00 PM EST",
+    address: "Online — link sent after RSVP",
     artists: ["Laura Elidedt Rodriguez", "Parham Ghalamdar"],
     description:
       "An exhibition as a playable ecosystem for artist-made games, XR works, and live interfaces.",
@@ -38,6 +40,7 @@ export const EVENTS: EventItem[] = [
     title: "Attention//Distraction",
     organizers: "UAAD",
     time: "8:00 PM – Late",
+    address: "Knockdown Center, 52-19 Flushing Ave, Maspeth, NY",
     artists: ["Yu Chen", "Lingyi Kong"],
     description:
       "An exhibition exploring misplaced and mediated attention through installations, net art, live video game performance, and artist talks.",
@@ -51,6 +54,7 @@ export const EVENTS: EventItem[] = [
     title: "TechnoMirage: The Publication",
     organizers: "UAAD",
     time: "5:00 PM – 9:00 PM",
+    address: "MetaLabel HQ, New York, NY",
     artists: ["various contributors"],
     description:
       "An event series examining AI through artistic inquiry, speculative practice, and worldbuilding.",
@@ -64,6 +68,7 @@ export const EVENTS: EventItem[] = [
     title: "Rising River: In Conversation",
     organizers: "UAAD",
     time: "1:00 PM EST",
+    address: "Online — link sent after RSVP",
     artists: ["Rising River collective"],
     description:
       "A conversation about Rising River, an AI-powered VR experience exploring the mind and memory.",
@@ -77,6 +82,7 @@ export const EVENTS: EventItem[] = [
     title: "Worlds Adrift",
     organizers: "UAAD x Creative Code Art",
     time: "9:00 PM – 2:00 AM",
+    address: "Elsewhere, 599 Johnson Ave, Brooklyn, NY",
     artists: ["lineup TBA"],
     description:
       "A night of AV performances and video art gathering artists from around the world.",
@@ -90,6 +96,7 @@ export const EVENTS: EventItem[] = [
     title: "Static Bloom",
     organizers: "UAAD",
     time: "7:00 PM – 12:00 AM",
+    address: "Knockdown Center, 52-19 Flushing Ave, Maspeth, NY",
     artists: ["Nia Okafor", "Trent Voss"],
     description:
       "A group show of generative sculpture and sound work exploring growth patterns in noisy systems.",
@@ -103,6 +110,7 @@ export const EVENTS: EventItem[] = [
     title: "Signal Drift",
     organizers: "UAAD x Creative Code Art",
     time: "6:30 PM EST",
+    address: "Online — link sent after RSVP",
     artists: ["Marguerite Lin"],
     description:
       "A livestreamed lecture-performance on transmission errors as a creative medium.",
@@ -116,6 +124,7 @@ export const EVENTS: EventItem[] = [
     title: "Low Light Archive",
     organizers: "UAAD",
     time: "7:30 PM – 11:00 PM",
+    address: "The Shed, 545 W 30th St, New York, NY",
     artists: ["Hana Baptiste", "Cole Whitfield", "Reyna Ostrowski"],
     description:
       "An exhibition of photography and video preserved from community archives, projected after dark.",
@@ -129,6 +138,7 @@ export const EVENTS: EventItem[] = [
     title: "Ambient Rebellion",
     organizers: "UAAD",
     time: "8:00 PM – 1:00 AM",
+    address: "Elsewhere, 599 Johnson Ave, Brooklyn, NY",
     artists: ["lineup TBA"],
     description:
       "A night of ambient and noise sets paired with reactive light installations.",
@@ -142,6 +152,7 @@ export const EVENTS: EventItem[] = [
     title: "Ghost Protocols",
     organizers: "UAAD x Creative Code Art",
     time: "5:00 PM EST",
+    address: "Online — link sent after RSVP",
     artists: ["Devi Ashworth", "Youssef Kanaan"],
     description:
       "A workshop and screening on artist-built surveillance-resistance tools.",
@@ -155,6 +166,7 @@ export const EVENTS: EventItem[] = [
     title: "Terminal Bloom",
     organizers: "UAAD",
     time: "6:00 PM – 10:00 PM",
+    address: "MetaLabel HQ, New York, NY",
     artists: ["various contributors"],
     description:
       "A closing group show for the year, spanning installation, print, and net art.",
