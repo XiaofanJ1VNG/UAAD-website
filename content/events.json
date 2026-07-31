@@ -422,12 +422,19 @@
     "time": "",
     "address": "",
     "artists": [
-      "Katherine Helen Fisher, Mengna Da w/ Chienn Tai, Shihan Zhang w/ Yilin Ye, Mingyong Cheng, Han Zhang, Ziwei Liu, and Jiaye Leng"
+      "Katherine Helen Fisher",
+      "Mengna Da w/ Chienn Tai",
+      "Shihan Zhang w/ Yilin Ye",
+      "Mingyong Cheng",
+      "Han Zhang",
+      "Ziwei Liu",
+      "and Jiaye Leng"
     ],
     "description": "Through performance, interactive installations, and live generative media, (Dis)consent explores how consent, in an age of algorithms and ecological crisis, is assumed, negotiated, withdrawn, and manipulated in real time. Audiences are invited to command bodies, contribute data, reshape algorithmically generated images, and participate in speculative ecological systems.",
-    "coverImage": "wix:image://v1/f4c0ba_d8f8f7aa691c4ff0adce18c37f795cbe~mv2.png/Instagram%20post%20-%208.png#originWidth=1744&originHeight=1080",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/6822e83f-86d7-49b6-97de-f152455a55ea.png",
     "archived": false,
-    "id": "8478bf1a-2fe2-4e8f-9104-b366f33429dc"
+    "id": "8478bf1a-2fe2-4e8f-9104-b366f33429dc",
+    "tags": []
   },
   {
     "date": "2025-12-12",
