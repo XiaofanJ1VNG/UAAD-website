@@ -341,9 +341,10 @@
     "address": "",
     "artists": [],
     "description": "In an era of rapid technological advancement and ecological crisis, ”Unbound Variable“ highlights the interdependence of organic and synthetic realms while challenging capitalist frameworks that commodify nature and culture. The exhibition features diverse media—digital installations, interactive art, audio-visuals, ecological interventions, etc.—that critique anthropocentric views and advocate for an alternative socio-techno-ecological landscape. By blurring the lines between physical and virtual worlds, ”Unbound Variable“ invites viewers to explore the transformative power of art beyond traditional boundaries.",
-    "coverImage": "wix:image://v1/f4c0ba_bbd0569f29ad450189fc3fd9b80ea139~mv2.jpg/06424ee5079c949ecb24b6f7eb49acf.jpg#originWidth=3731&originHeight=3979",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/f4f43d07-fee3-4558-aaeb-8a06182623b0.jpg",
     "archived": false,
-    "id": "aafcb153-1f48-466f-b4ac-a33a2a161d36"
+    "id": "aafcb153-1f48-466f-b4ac-a33a2a161d36",
+    "tags": []
   },
   {
     "date": "2025-04-05",
