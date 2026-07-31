@@ -479,12 +479,31 @@
     "time": "",
     "address": "",
     "artists": [
-      "3<3=3 (Chunlu Sheng and Xuanjie Huang), Alice Chen, Andy DiLallo and Ian Anderson, Caren Wenqing Ye and Keer Zhao, Cecil Boey and Michael Wang, Chia-hua Lee, Freddie Sanders and Chaney Manshu Diao, Huanzhe Hu, Jiatong Yao, Lois He, John Luo, Kaiyang Zhao, Kaiyang Zhao, Vio Zhu, Neonature (Kassandra Huynh and Johannes Fuchs), Parsons & Charlesworth, SENAIDA and Ricky Kapoor, Song Xin and Rosie Muhan Yuan, WanderLens Lab (Zihao Zhang and Daoxin Chen)"
+      "3<3=3 (Chunlu Sheng and Xuanjie Huang)",
+      "Alice Chen",
+      "Andy DiLallo and Ian Anderson",
+      "Caren Wenqing Ye and Keer Zhao",
+      "Cecil Boey and Michael Wang",
+      "Chia-hua Lee",
+      "Freddie Sanders and Chaney Manshu Diao",
+      "Huanzhe Hu",
+      "Jiatong Yao",
+      "Lois He",
+      "John Luo",
+      "Kaiyang Zhao",
+      "Kaiyang Zhao",
+      "Vio Zhu",
+      "Neonature (Kassandra Huynh and Johannes Fuchs)",
+      "Parsons & Charlesworth",
+      "SENAIDA and Ricky Kapoor",
+      "Song Xin and Rosie Muhan Yuan",
+      "WanderLens Lab (Zihao Zhang and Daoxin Chen)"
     ],
     "description": "Drawing on UAAD’s experience in virtual exhibitions and immersive environments, we mapped out the critical concepts in virtual world-making and transformed each into a thought-provoking prompt in our latest zine.",
-    "coverImage": "wix:image://v1/f4c0ba_a009db4ca5fa4341bbcba1f76c8168ef~mv2.png/Untitled_1-2560x1317%20(4).png#originWidth=2560&originHeight=1317",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/791769e3-1391-4f3a-b3c7-abd218ef03d5.png",
     "archived": false,
-    "id": "9c8ed784-8fb9-4a1d-b731-a239022b6919"
+    "id": "9c8ed784-8fb9-4a1d-b731-a239022b6919",
+    "tags": []
   },
   {
     "date": "2025-05-24",
