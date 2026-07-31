@@ -682,11 +682,15 @@
     "time": "",
     "address": "",
     "artists": [
-      "Andrew Dong Deng, Audrey Chou, Interactive Items, Yiou Wang"
+      "Andrew Dong Deng",
+      "Audrey Chou",
+      "Interactive Items",
+      "Yiou Wang"
     ],
     "description": "An evening of conversation, speculation, and creative play.\n\nA gathering of artists, designers, and technologists, thought leaders tracing how generative media reshapes the act and the meaning of making together.\n\nThis is a living experiment. A discourse on futures before they arrive. A space to question how creativity, culture, and technology entwine;\nto hold what feels both urgent and unfinished. To stretch the edges of what we call art, design, and expression.\n\nAfter the discussion, we are hosting an afterparty to celebrate.\nFriends, family, and lovers of FLORA — join us for the afterparty.",
-    "coverImage": "wix:image://v1/f4c0ba_1a1b21692e4e442e91612d622a24c5ac~mv2.jpg/_S6A1223.jpg#originWidth=5760&originHeight=3840",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/e691fd91-f040-449e-b48e-e15940451585.jpg",
     "archived": false,
-    "id": "24a64838-c5e2-4cb4-97fd-1b1987af8cd8"
+    "id": "24a64838-c5e2-4cb4-97fd-1b1987af8cd8",
+    "tags": []
   }
 ]
