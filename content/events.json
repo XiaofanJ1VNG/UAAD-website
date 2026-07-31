@@ -445,12 +445,30 @@
     "time": "",
     "address": "",
     "artists": [
-      "Aurora Mititelu, Erin Robinson + Jamie Turner, Jackie Liu, Jonah King, Tee Topor, Ian Cox, Hiba Ali, Pearlyn Lii, Chia Amisola, Shashwath Santosh + Nithin Eluvathingal, Ian Cox, Tommy Martinez, Peter Nichols, the Cybernetics Image Library, the collective of Lois He, Vio Zhu, John Luo, Kaiyang Zhao"
+      "Aurora Mititelu",
+      "Erin Robinson + Jamie Turner",
+      "Jackie Liu",
+      "Jonah King",
+      "Tee Topor",
+      "Ian Cox",
+      "Hiba Ali",
+      "Pearlyn Lii",
+      "Chia Amisola",
+      "Shashwath Santosh + Nithin Eluvathingal",
+      "Ian Cox",
+      "Tommy Martinez",
+      "Peter Nichols",
+      "the Cybernetics Image Library",
+      "the collective of Lois He",
+      "Vio Zhu",
+      "John Luo",
+      "Kaiyang Zhao"
     ],
     "description": "Neuromantics is a one-day event on December 12 that turns a Soho loft into a playable ecosystem of artist-made games, XR works, live interfaces, and moving-image pieces. Running from 4 - 11 PM at 393 Broadway, 2nd Fl, the event builds on the structural logic found in Neuromancer, the 1984 novel by William Gibson, where meaning is shaped by how people move through networks. Neuromantics approaches this idea through gaming. Works shift, open, or change state based on human action and interaction.",
-    "coverImage": "wix:image://v1/f4c0ba_6b1be453e5f24c5ead53a7875bc45e4a~mv2.jpg/0Q8A0466.jpg#originWidth=7624&originHeight=4289",
+    "coverImage": "https://raw.githubusercontent.com/XiaofanJ1VNG/UAAD-website/main/content/uploads/c2e389ba-5a21-4165-92d3-5bebf4f3f746.jpg",
     "archived": false,
-    "id": "5e634afb-e177-4831-b0a3-1456f6c668c4"
+    "id": "5e634afb-e177-4831-b0a3-1456f6c668c4",
+    "tags": []
   },
   {
     "date": "2025-01-17",
