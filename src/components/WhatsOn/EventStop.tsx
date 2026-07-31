@@ -21,7 +21,7 @@ const TRANSITION = { type: "tween", ease: "easeInOut", duration: 0.5 } as const;
 // Dot diameter and connecting-line thickness are the same value on
 // purpose (per brand spec: the line should read as exactly as thick as
 // the stop marker, like a real subway map).
-const DOT_SIZE = 16;
+const DOT_SIZE = 21;
 
 export default function EventStop({
   event,
