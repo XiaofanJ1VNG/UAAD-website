@@ -48,14 +48,14 @@ export default function Header() {
     <>
       <div
         ref={barRef}
-        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-6 py-5 md:px-10 md:py-6"
+        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-6 py-5 transition-transform duration-1000 ease-[cubic-bezier(0.37,0,0.63,1)] md:px-10 md:py-6"
         style={{ transform: hidden ? "translateY(-100%)" : "translateY(0)" }}
       >
         <Link href="/" className="flex-shrink-0">
           <Logo className="h-9 w-9 md:h-10 md:w-10" />
         </Link>
 
-        <nav className="hidden h-[50px] items-center gap-1 rounded-[100px] bg-[#272727]/80 px-1.5 md:flex">
+        <nav className="hidden h-[50px] items-center gap-[6px] rounded-[100px] bg-[#272727]/80 px-1.5 md:flex">
           {NAV_LINKS.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -63,7 +63,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={
-                  "rounded-full border px-5 py-2 text-[20px] transition-colors " +
+                  "rounded-full border px-[10px] py-[5px] text-center text-[20px] transition-colors " +
                   (isActive
                     ? "border-[#6E6E6E] bg-[#121212] text-accent"
                     : "border-[#6E6E6E] bg-[#757575]/20 text-white hover:border-transparent hover:bg-[#121212]")
@@ -75,7 +75,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 rounded-full border border-[#6E6E6E] bg-[#272727]/80 px-4 py-2.5 text-sm text-white/60 md:flex">
+        <div className="hidden items-center gap-3 rounded-full border border-[#6E6E6E] bg-[#272727]/80 py-2.5 pl-3 pr-3 text-sm text-white/60 transition-colors focus-within:bg-[#121212] hover:bg-[#121212] md:flex">
           <svg
             className="h-4 w-4 flex-shrink-0"
             viewBox="0 0 20 20"
@@ -86,7 +86,11 @@ export default function Header() {
             <circle cx="9" cy="9" r="6" />
             <path d="M17 17l-3.5-3.5" strokeLinecap="round" />
           </svg>
-          <span>Search...</span>
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full bg-transparent text-white outline-none placeholder:text-white/60"
+          />
         </div>
 
         {/* Mobile: compact menu affordance (stub for MVP) */}

@@ -59,16 +59,30 @@ export default function EventStop({
       transition={SPRING}
       className="flex flex-shrink-0 flex-col items-start"
       style={slotStyle}
+      data-event-id={event.id}
     >
       {/* line + dot + date/location/year label — spans the full slot
           (including the trailing gap) so it connects seamlessly with the
-          next stop's line */}
-      <div className="relative h-24 w-full flex-shrink-0">
+          next stop's line.
+
+          This row itself has `layout` so it smoothly tracks the slot's
+          width change (that's the whole row growing/shrinking). The dot
+          and the date label ALSO get their own `layout` so Framer applies
+          the same nested scale-correction trick used for the card/image
+          elsewhere in this file: it cancels out the horizontal stretch
+          the row's own resize-transform would otherwise impose on them,
+          so they hold their true size and never look squashed/stretched.
+          The line bar is deliberately left as a plain (non-layout) div —
+          it's the one piece that SHOULD visibly stretch, since it's what
+          reads as the line elongating to match the wider row. */}
+      <motion.div layout transition={SPRING} className="relative h-24 w-full flex-shrink-0">
         <div
           className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
           style={{ backgroundColor: lineColor, opacity: 0.5, height: DOT_SIZE }}
         />
-        <div
+        <motion.div
+          layout
+          transition={SPRING}
           className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full ring-[6px] ring-ink"
           style={{
             backgroundColor: lineColor,
@@ -76,7 +90,11 @@ export default function EventStop({
             width: DOT_SIZE,
           }}
         />
-        <div className="absolute bottom-full left-0 mb-[15px] whitespace-nowrap font-offbit">
+        <motion.div
+          layout
+          transition={SPRING}
+          className="absolute bottom-full left-0 mb-[15px] whitespace-nowrap font-offbit"
+        >
           {isFirstOfYear && (
             <div className="text-[24px] font-bold tracking-wide" style={{ color: lineColor }}>
               {year}
@@ -85,8 +103,8 @@ export default function EventStop({
           <div className="text-[21px] tracking-wide text-white/60">
             {event.displayDate}, {event.location}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* flyer card — narrower than the slot, so the gap after it stays
           visually open even though the line above runs through it. This is
