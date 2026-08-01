@@ -13,22 +13,44 @@ function displayDateFrom(dateStr: string): string {
   return m && d ? `${m}/${d}` : "";
 }
 
-// Only these three are required — everything else can be blank and gets
-// filled with a sensible empty default, so a rough CSV of old events
-// (which might be missing some columns for some rows) still imports
-// instead of failing outright.
-const REQUIRED = ["date", "location", "title"] as const;
-
-function splitList(value: string | undefined): string[] {
+// Names in a cell are comma-separated in real exports (e.g. from Wix),
+// which is safe because Papa Parse already un-quotes the CSV column
+// itself — by the time we see this string, the commas inside it are just
+// characters, not column separators.
+function splitCommaList(value: string | undefined): string[] {
   return (value ?? "")
-    .split(";")
+    .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
 }
 
-// Header matching is case/whitespace-insensitive (transformHeader below).
-// A couple of columns accept either name so older CSVs (or the original
-// template) keep working alongside the current column names.
+// Tags sometimes arrive as a JSON array string (e.g. `["Exhibition","Talk"]`,
+// which is how some CMS exports serialize a multi-select field). Falls back
+// to a plain comma-separated list otherwise.
+function parseTags(value: string | undefined): string[] {
+  const trimmed = (value ?? "").trim();
+  if (!trimmed) return [];
+  if (trimmed.startsWith("[")) {
+    try {
+      const parsed = JSON.parse(trimmed);
+      if (Array.isArray(parsed)) {
+        return parsed.map((v) => String(v).trim()).filter(Boolean);
+      }
+    } catch {
+      // fall through to comma-split below
+    }
+  }
+  return splitCommaList(trimmed);
+}
+
+function isUsableImageUrl(value: string | undefined): boolean {
+  return /^https?:\/\//i.test((value ?? "").trim());
+}
+
+// Nothing is required — a row with a blank title or date still imports.
+// Dates that are empty just sort to the start of the timeline rather than
+// blocking the whole import; better to get everything in and let you
+// clean up individual events afterward than to silently drop rows.
 export function parseEventsCsv(csvText: string): CsvImportResult {
   const parsed = Papa.parse<Record<string, string>>(csvText, {
     header: true,
@@ -40,48 +62,55 @@ export function parseEventsCsv(csvText: string): CsvImportResult {
     (e) => `Row ${(e.row ?? 0) + 2}: ${e.message}`
   );
 
-  const events: Omit<EventItem, "id">[] = [];
-
-  parsed.data.forEach((row, i) => {
+  const events: Omit<EventItem, "id">[] = parsed.data.map((row, i) => {
     const rowNum = i + 2; // +1 for zero-index, +1 for the header row itself
-    const missing = REQUIRED.filter((key) => !row[key]?.trim());
-    if (missing.length > 0) {
-      errors.push(`Row ${rowNum}: missing ${missing.join(", ")} — skipped`);
-      return;
+    const date = (row.date ?? "").trim();
+    if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      errors.push(`Row ${rowNum}: date "${date}" isn't in YYYY-MM-DD format — imported without a date`);
+    }
+    const validDate = /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : "";
+
+    const rawCover = row.cover ?? row.coverimage ?? "";
+    if (rawCover.trim() && !isUsableImageUrl(rawCover)) {
+      errors.push(
+        `Row ${rowNum}: coverImage "${rawCover.trim().slice(0, 40)}..." isn't a usable web URL (e.g. a wix:image:// reference) — imported without a cover image`
+      );
     }
 
-    const date = row.date.trim();
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-      errors.push(`Row ${rowNum}: date "${date}" isn't in YYYY-MM-DD format — skipped`);
-      return;
-    }
-
-    events.push({
-      date,
-      displayDate: displayDateFrom(date),
-      location: row.location.trim(),
-      title: row.title.trim(),
-      organizers: row.organizers?.trim() ?? "",
-      time: row.time?.trim() ?? "",
-      address: row.address?.trim() ?? "",
-      artists: splitList(row.artists),
-      // "intro" is the current column name; "description" still works too.
+    return {
+      date: validDate,
+      displayDate: validDate ? displayDateFrom(validDate) : "",
+      location: (row.location ?? "").trim(),
+      title: (row.title ?? "").trim(),
+      // Organizers/curator/co-organizer(s) are all treated as one "who's
+      // behind this" field — whichever of these columns is present in the
+      // CSV wins, so a single "co-organizer" column (as well as "Curator"
+      // or "organizers") all map to the same place.
+      organizers: (
+        row["co-organizer"] ??
+        row["co-organizers"] ??
+        row["co-organized with"] ??
+        row.coorganizedwith ??
+        row.curator ??
+        row.organizers ??
+        row.organizer ??
+        ""
+      ).trim(),
+      time: (row.time ?? "").trim(),
+      artists: splitCommaList(row.artists),
       description: (row.intro ?? row.description ?? "").trim(),
-      // CSV cells can only hold text, so images can't travel through a
-      // CSV directly — "cover" (or "coverimage") should be a URL to an
-      // already-hosted image. Leaving it blank is fine; add a photo
-      // later by editing that event individually.
-      coverImage: (row.cover ?? row.coverimage ?? "").trim(),
+      coverImage: isUsableImageUrl(rawCover) ? rawCover.trim() : "",
       archived: /^true$/i.test((row.archive ?? row.archived ?? "").trim()),
-      tags: splitList(row.tags),
-      url: row.url?.trim() || undefined,
-      coOrganizedWith: row["co-organized with"]?.trim() || row.coorganizedwith?.trim() || undefined,
-    });
+      tags: parseTags(row.tags),
+      // Accept "url" or "link"/"links" — different exports name this
+      // column differently.
+      url: (row.url ?? row.link ?? row.links ?? "").trim() || undefined,
+    };
   });
 
   return { events, errors };
 }
 
-export const CSV_TEMPLATE = `Title,Date,Tags,location,intro,URL,cover,archive,Co-organized with
-Ghosts in the Feedback Loop,2025-03-14,exhibition; net art,NYC,A virtual exhibition exploring algorithmic systems.,https://example.com/event-page,https://example.com/flyer.jpg,false,Creative Code Art
+export const CSV_TEMPLATE = `date,location,title,co-organizer,Tags,time,Url,artists,description,coverImage,archived
+2025-03-14,"Brooklyn Art Haus, NYC",Ghosts in the Feedback Loop,Amy Xiaofan Jiang x Creative Code Art,"[""Exhibition""]",7:00 PM - 11:00 PM,https://example.com/event-page,"k0j0, Amanda Bennetts, Florence Alwajih",A virtual exhibition exploring algorithmic systems.,https://example.com/flyer.jpg,FALSE
 `;

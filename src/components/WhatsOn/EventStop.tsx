@@ -21,7 +21,7 @@ const TRANSITION = { type: "tween", ease: "easeInOut", duration: 0.5 } as const;
 // Dot diameter and connecting-line thickness are the same value on
 // purpose (per brand spec: the line should read as exactly as thick as
 // the stop marker, like a real subway map).
-const DOT_SIZE = 16;
+const DOT_SIZE = 21;
 
 export default function EventStop({
   event,
@@ -128,7 +128,7 @@ export default function EventStop({
             </div>
           )}
           <div className="text-[21px] tracking-wide text-white/60">
-            {event.displayDate}, {event.location}
+            {event.displayDate}
           </div>
         </motion.div>
       </motion.div>
@@ -151,14 +151,28 @@ export default function EventStop({
         {...handlers}
       >
         {!active && (
-          <motion.img
-            layout
-            layoutId={imageLayoutId}
-            transition={TRANSITION}
-            src={event.coverImage}
-            alt={`${event.title} flyer`}
-            className="h-[264px] w-full object-cover"
-          />
+          <div className="relative h-[264px] w-full">
+            <motion.img
+              layout
+              layoutId={imageLayoutId}
+              transition={TRANSITION}
+              src={event.coverImage}
+              alt={`${event.title} flyer`}
+              className="h-full w-full object-cover"
+            />
+            {event.tags && event.tags.length > 0 && (
+              <div className="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1">
+                {event.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-ink/70 px-2 py-0.5 text-[11px] text-white/90 backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         )}
 
         {active && isDesktop && (
@@ -194,6 +208,10 @@ export default function EventStop({
 }
 
 function DetailPanel({ event }: { event: EventItem }) {
+  // Combine date + time into one "When" line; fall back to just the date
+  // when there's no time on record (bulk-imported events often lack one).
+  const when = event.time ? `${event.displayDate}, ${event.time}` : event.displayDate;
+
   return (
     <motion.div
       layout
@@ -206,17 +224,43 @@ function DetailPanel({ event }: { event: EventItem }) {
       <p className="text-[18px] uppercase tracking-wide text-white/50">
         {event.organizers}
       </p>
+      {event.tags && event.tags.length > 0 && (
+        <div className="flex flex-wrap gap-[6px]">
+          {event.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-white/10 px-3 py-1 text-[12px] uppercase tracking-wide text-white/80"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
       <dl className="mt-[6px] grid grid-cols-[auto,1fr] gap-x-[18px] gap-y-[6px] text-[18px] text-white/70">
         <dt className="text-white/40">When</dt>
-        <dd>{event.time}</dd>
+        <dd>{when}</dd>
         <dt className="text-white/40">Where</dt>
-        <dd>{event.address}</dd>
-        <dt className="text-white/40">Artists</dt>
-        <dd>{event.artists.join(", ")}</dd>
+        <dd>{event.location}</dd>
+        {event.artists.length > 0 && (
+          <>
+            <dt className="text-white/40">Artists</dt>
+            <dd>{event.artists.join(", ")}</dd>
+          </>
+        )}
       </dl>
       <p className="mt-3 text-[14px] leading-relaxed text-white/80">
         {event.description}
       </p>
+      {event.url && (
+        <a
+          href={event.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-flex w-fit items-center rounded-full bg-accent px-4 py-2 text-[14px] font-medium text-ink transition-opacity hover:opacity-90"
+        >
+          Learn more
+        </a>
+      )}
     </motion.div>
   );
 }
