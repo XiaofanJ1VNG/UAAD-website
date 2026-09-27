@@ -1,0 +1,1358 @@
+[
+  {
+    "year": "2026",
+    "title": "(Dis)consent",
+    "category": "curation",
+    "tag": "Performance",
+    "description": "A night of performance and interactive installations questioning how consent is negotiated across bodies, algorithms, and ecological systems.",
+    "url": "https://luma.com/g2um2bai",
+    "image": "images/consent/cover.jpg",
+    "slug": "dis-consent",
+    "photoCredit": " August 2, 2026 · Mesh Art Center, New York",
+    "imageAlt": "Yellow graphic artwork over a floral photograph",
+    "role": "Curatoror · Production Lead · Program Design · Visual Design · Marketing & PR",
+    "venue": "Mesh Art Center, Brooklyn, New York",
+    "date": "August 2, 2026",
+    "introduction": "Presented by MESH_ARTS and UAAD, (Dis)consent brought performances, interactive installations, and live generative media into dialogue. Visitors could command bodies, contribute data, alter generated images, and participate in speculative ecological systems. The program asked whether refusal, withdrawal, and renegotiation remain possible once we are already embedded in a system.",
+    "program": [
+      "7:30 pm · Doors and interactive installations",
+      "8:00 pm · Welcome and opening remarks",
+      "8:10 pm · Mengna Da with Chienn Tai, SOUR GUMMIES DON’T CRY",
+      "8:40 pm · Shihan Zhang with Yilin Ye and collaborators, Until the Bees Return",
+      "8:50 pm · Artist conversation",
+      "Installation · Katherine Helen Fisher, Cyborg Mirror II"
+    ],
+    "gallery": [
+      {
+        "image": "images/consent/cover.jpg",
+        "imageAlt": "Yellow graphic artwork over a floral photograph",
+        "photoCredit": "Designed by Amy Xiaofan Jiang"
+      },
+      {
+        "image": "images/consent/gallery/webp/01.webp",
+        "imageAlt": "Artist talk",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/02.webp",
+        "imageAlt": "Artist performing in front of digital projections",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/03.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/04.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/05.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/06.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/07.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/08.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/09.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/010.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/011.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/consent/gallery/webp/012.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Katherine Helen Fisher · Mengna Da with Chienn Tai · Shihan Zhang with Yilin Ye, Mingyong Cheng, Han Zhang, Ziwei Liu & Jiaye Leng "
+      }
+    ],
+    "tags": [
+      "Performance",
+      "Talk"
+    ]
+  },
+  {
+    "slug": "worlds-adrift",
+    "title": "Worlds Adrift",
+    "year": "2026",
+    "category": "curation",
+    "tag": "Performance",
+    "description": "An evening of live A/V performances and video works tracing frequencies, ruptures, and worlds in transit.",
+    "role": "Curatorial & Production Lead · Program Design · Visual Design · Marketing & PR",
+    "venue": "Brooklyn Art Haus",
+    "date": "June 13, 2026",
+    "introduction": "Co-organized by Creative Code Art and UAAD, Worlds Adrift assembled artists from around the world for a temporary environment of video, sound, and live A/V performance. The works moved between geographies, languages, and natural and artificial systems, allowing images and sounds to overlap before dispersing.",
+    "program": [
+      "5:00 pm · Doors and video program",
+      "5:30 pm · Live A/V performances by MF Clarke, ZYKR, Matthew D Gantt, Nsyme × Andalu & Rob Interface, c03ra, and Skulptor",
+      "8:30 pm · Close"
+    ],
+    "url": "",
+    "image": "images/adrift/cover.webp",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "June 13, 2026 · Brooklyn Art Haus, New York",
+    "gallery": [
+      {
+        "video": "images/adrift/gallery/012.mp4",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/01.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/02.webp",
+        "imageAlt": "Artist performing in front of digital projections",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/03.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/04.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/05.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/06.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/07.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/08.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/09.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/010.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/adrift/gallery/webp/011.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Live A/V performers",
+        "names": "MF Clarke · ZYKR · Matthew D Gantt · Nsyme × Andalu & Rob Interface · c03ra · Skulptor"
+      },
+      {
+        "heading": "Video artists",
+        "names": "IKYA · GORZ (sound with m preis) · Tanky · Ruipeng Wang · pppunko (sound by KEIU / Raven) · Lin Feng (sound by Raven) · Jessie Han (sound by Bobi & Fliko)"
+      }
+    ]
+  },
+  {
+    "year": "2026",
+    "title": "Attention // Distraction",
+    "category": "curation",
+    "tag": "Exhibition",
+    "description": "A two-day UAAD program exploring how attention is shaped and contested by digital culture, with approximately 250 visitors.",
+    "url": "https://luma.com/gdfd42e4",
+    "image": "images/attention/cover.webp",
+    "slug": "attention-distraction",
+    "photoCredit": "May 8–9, 2026 · The Blanc, New York",
+    "imageAlt": "Project preview photograph",
+    "role": "Curatorial & Production Lead · Program Design · Visual Design · Marketing & PR",
+    "venue": "The Blanc",
+    "date": "May 8–9, 2026",
+    "introduction": "Presented by UAAD at The Blanc, Attention // Distraction examined the forces that direct our attention and the things left outside the frame. Interactive installations, net art, XR, artist-made games, algorithmic systems, live performance, and talks treated distraction as a tool for refusal, interference, and subversion.",
+    "program": [
+      "May 8 · Exhibition, 4–10 pm; talks and performances, 7–9 pm",
+      "May 9 · Exhibition, 11 am–5 pm"
+    ],
+    "gallery": [
+      {
+        "video": "images/attention/gallery/0428.mp4",
+        "imageAlt": "Trailer",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/01.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/02.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/03.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/04.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/05.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/06.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/07.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/08.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/09.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/010.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/011.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/012.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/013.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/014.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/015.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/016.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/017.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/018.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/019.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/020.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/021.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/022.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/023.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/attention/gallery/webp/024.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Sam Lavigne · Temitope Olujobi · Anna Zhang · Queenie Wu · Tina Tarighian · k0j0 (Koi Ren & Joey Verbeke) · foxes · Mengna Da · Iris Xiaoyu Qu · Niles Fromm · Adam Salem · Julia Kan · Jasmine Nackash · Supernova191919 · Foreseen Agency"
+      }
+    ],
+    "tags": [
+      "Exhibition",
+      "Talk"
+    ]
+  },
+  {
+    "slug": "neuromantics",
+    "title": "Neuromantics",
+    "year": "2025",
+    "category": "curation",
+    "tag": "Exhibition",
+    "description": "A playable Soho exhibition of artist-made games, XR, live interfaces, and moving-image works.",
+    "role": "Curatorial & Production Lead · Program Design · Visual Design · Marketing & PR",
+    "venue": "393 Broadway, 2nd Floor, New York",
+    "date": "December 12, 2025",
+    "introduction": "Co-curated with Danielle Paterson, Neuromantics turned a Soho loft into a playable ecosystem. Artists created worlds with their own rules, some open and others unlocked through collaboration, exchange, or participation. Visitors shaped what each work revealed, while evening live sets activated the space through audio interfaces and experimental sound.",
+    "program": [
+      "4:00–11:00 pm · Exhibition and playable works",
+      "8:00–10:00 pm · Live sets by Ana Roman, Raven Tao with visuals by Yiou Wang, and MAYSUN"
+    ],
+    "url": "https://www.uaad.art/neuromantics",
+    "image": "images/neuro/cover.jpg",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "December 12, 2025 · 393 Broadway, 2nd Floor, New York",
+    "gallery": [
+      {
+        "image": "images/neuro/gallery/webp/01.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/02.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/03.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/04.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/05.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/06.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/07.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/08.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/09.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/010.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/011.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/012.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/013.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/014.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/015.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/016.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/017.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/018.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/019.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/020.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/021.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/022.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/023.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/neuro/gallery/webp/024.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Exhibiting artists",
+        "names": "Aurora Mititelu · Erin Robinson & Jamie Turner · Jackie Liu · Jonah King · Tee Topor · Ian Cox · Hiba Ali · Pearlyn Lii · Chia Amisola · Shashwath Santosh & Nithin Eluvathingal · Tommy Martinez · Peter Nichols · Cybernetics Image Library · Lois He, Vio Zhu, John Luo & Kaiyang Zhao"
+      },
+      {
+        "heading": "Live sets",
+        "names": "Ana Roman · Raven Tao with visuals by Yiou Wang · MAYSUN"
+      }
+    ],
+    "tags": [
+      "Exhibition",
+      "Performance"
+    ]
+  },
+  {
+    "slug": "ghosts-in-the-feedback-loop",
+    "title": "Ghosts in the Feedback Loop",
+    "year": "2025",
+    "category": "curation",
+    "tag": "Virtual Curation",
+    "description": "An immersive virtual exhibition exploring how people erased or distorted by algorithms can reclaim technological space.",
+    "role": "Curatorial & Production Lead · Chief Editor · 3D Design · Marketing & PR",
+    "venue": "New Art City (virtual)",
+    "date": "September 8, 2025",
+    "introduction": "In the feedback loops of machine learning, certain bodies, cultures, and ways of knowing are made visible, distorted, or erased. Like ghosts—excluded yet ever-present—they haunt the machine. They slip through algorithmic blind spots, bend systems’ logic, and disrupt with glitches and ruptures that unsettle computational control. But ghosts don’t just haunt—they rewire. They assert presence, reframe meaning, and speak in forms the system was never trained to understand. Through cracks in the loop, they reemerge as designers of new imaginaries for themselves and for the communities the system failed to see.",
+    "program": [
+      "Virtual exhibition"
+    ],
+    "url": "https://newart.city/show/ghosts-in-the-feedback-loop",
+    "image": "images/ghost/cover.webp",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "September 8, 2025 · New Art City (virtual)",
+    "gallery": [
+      {
+        "image": "images/ghost/cover.gif",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Andrea Mikyska · Andy DiLallo, Ian Anderson, Jacob Riddle · Amanda Bennetts · Carrie Wang · Florence Alwajih · Joaquina Salgado · Joey Verbeke, Koi Ren · Laura Elidedt Rodriguez · Marcos Micozzi, Hef Prentice · Mingyong Cheng, Sophia Sun, Han Zhang, Yuemeng Gu, erika · Munus Shih · Parham Ghalamdar · Samar Younes · Shihan Zhang, Ziwei Liu, Qingxiao Zheng · Yashika Goel · Zivvy Epstein, Amy Smith, Hope Schroeder"
+      },
+      {
+        "heading": "3D environment design",
+        "names": "Effy Ma · Suki Su · Amy Xiaofan Jiang"
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "title": "TechnoMirage: Creative AI Futures",
+    "category": "curation",
+    "tag": "Talk",
+    "description": "An online conversation with Parsons on authorship, ethics, access, and creative agency in AI.",
+    "url": "https://event.newschool.edu/technomirage",
+    "image": "images/mirage-online/cover.jpg",
+    "slug": "technomirage-parsons",
+    "photoCredit": "November 4, 2025 · Online · Parsons School of Design",
+    "imageAlt": "Project preview photograph",
+    "role": "Co-Organizer and Co-Host",
+    "venue": "Online · Parsons School of Design",
+    "date": "November 4, 2025",
+    "introduction": "Presented by UAAD and Parsons School of Design Strategies, this online edition of TechnoMirage brought artists, designers, and technologists into a conversation about creative AI. Panelists discussed authorship, ethics, access, and how AI reshapes collaboration and creative labor.",
+    "program": [
+      "Panel conversation on AI and creative futures",
+      "Audience discussion"
+    ],
+    "gallery": [
+      {
+        "image": "images/mirage-online/cover.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-online/gallery/01.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-online/gallery/02.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-online/gallery/03.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-online/gallery/04.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Panelists",
+        "names": "Jazsalyn · Ziv Epstein · Joaquina Salgado · Dominika Čupková"
+      },
+      {
+        "heading": "Co-hosts",
+        "names": "Amy Xiaofan Jiang · Julienne DeVita"
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "title": "TechnoMirage: Index NYC",
+    "category": "curation",
+    "tag": "Talk",
+    "description": "An in-person gathering at Index NYC exploring AI and speculative futures through conversation, a workshop, installations, and performance.",
+    "url": "https://www.index-space.org/programming/technomirage-evt-puPS2VXN79iEqXF",
+    "image": "images/mirage-nyc/cover.jpg",
+    "slug": "technomirage",
+    "photoCredit": "September 21, 2025 · Index NYC, New York",
+    "imageAlt": "Project preview photograph",
+    "role": "Co-Organizer",
+    "venue": "Index NYC",
+    "date": "September 21, 2025",
+    "introduction": "Co-organized by UAAD and Liminal at Index NYC, TechnoMirage asked what stories AI erases and how artists might reclaim them. The gathering brought panel discussion, a workshop, installations, and performance into a shared inquiry about speculative futures and creative agency.",
+    "program": [
+      "Panel discussion",
+      "Workshop",
+      "Installation and performance"
+    ],
+    "gallery": [
+      {
+        "image": "images/mirage-nyc/gallery/webp/01.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/02.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/03.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/04.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/05.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/06.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/07.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/08.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/09.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/010.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "video": "images/mirage-nyc/gallery/011.mp4",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/013.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/014.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/mirage-nyc/gallery/webp/015.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Carrie Sijia Wang · Munus Shih · Luca Lee · Mason Youngblood · Interactive Items"
+      }
+    ]
+  },
+  {
+    "slug": "nodes-i",
+    "title": "nodes:i",
+    "year": "2025",
+    "category": "curation",
+    "tag": "Performance",
+    "description": "An evening of talk, installation, and live coding performances connecting nodes:i, Processing, Artifice, and UAAD.",
+    "role": "Co-Curator · Event Production · Visual Design",
+    "venue": "NYU Tandon at The Yard",
+    "date": "October 10, 2025",
+    "introduction": "An evening at NYU Tandon at The Yard exploring creative tools, resource networks, and cultural infrastructure. Presented with Artifice, Processing Foundation, and UAAD, the program brought a talk by Moon Davé together with installation and live coded performances.",
+    "program": [
+      "6:30–6:45 pm · Reception and opening",
+      "6:45–7:15 pm · Moon Davé, talk and Q&A",
+      "7:25–8:10 pm · elekhlekha อีเหละเขละขละ",
+      "8:20–8:50 pm · Dan Gorelick and Torin Blankensmith",
+      "9:00–9:30 pm · Reckoner and Torin Blankensmith"
+    ],
+    "url": "https://luma.com/node1",
+    "image": "images/nodes/cover.webp",
+    "imageAlt": "",
+    "photoCredit": "October 10, 2025 · NYU Tandon at The Yard, New York",
+    "gallery": [
+      {
+        "video": "images/nodes/gallery/01.mp4",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "video": "images/nodes/gallery/02.mp4",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/04.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/05.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/06.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/07.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/08.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/09.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/010.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/011.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/012.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/nodes/gallery/webp/013.webp",
+        "imageAlt": "",
+        "photoCredit": ""
+      },
+      {
+        "video": "images/nodes/gallery/014.mp4",
+        "imageAlt": "",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Partners",
+        "names": "ARTIFICE · Processing Foundation · NYU Tandon @ Navy Yard · WLAB)"
+      },
+      {
+        "heading": "Talk",
+        "names": "Moon Davé"
+      },
+      {
+        "heading": "Artists and performers",
+        "names": "elekhlekha อีเหละเขละขละ (Kengchakaj and Nitcha) · Torin Blankensmith · Dan Gorelick · Reckoner (Sumanth Srinivasan)"
+      }
+    ],
+    "tags": [
+      "Performance",
+      "Talk"
+    ]
+  },
+  {
+    "year": "2025",
+    "title": "EX UTERO",
+    "category": "curation",
+    "tag": "Performance",
+    "description": "A sequential new media performance at ARTIFICE 004 that staged collapse as a site of new beginnings.",
+    "url": "https://www.uaad.art/post/uaad-and-artifice-present-ex-utero-at-culturehub-a-sequence-of-immersive-acts-in-a-post-apocalypt",
+    "image": "images/ex/cover.png",
+    "slug": "artifice-004-blackbox",
+    "photoCredit": "April 5, 2025 · CultureHu, New York",
+    "imageAlt": "Project preview photograph",
+    "role": "Curatorial & Production Lead, Black Box New Media Performance",
+    "venue": "CultureHub",
+    "date": "April 5, 2025",
+    "introduction": "The apocalypse has arrived. Final cries are swallowed in liquid ruin. Time fractures, collapses, and disappears. No origin, no inherited form. Life no longer emerges from the womb but through rupture, mutation, and synthetic gestation. [Ex Utero], Latin for \"outside the womb\" or \"beyond the uterus,\" is rebirth without a blueprint—an existence forged in the breakdown of structures, where form is never fixed, only recombined. [Ex Utero] showcases six artifacts from the digital realm, each a relic of speculative realities, a fragment of mythologies still in flux, and an echo of futures that refuse to solidify. Without a singular lineage, they emerge from a landscape of continuing transformation, where species, bodies, and languages dissolve into one another. No Garden of Eden. No return to dust. The mutants only remain in the ceaseless becoming.",
+    "program": [
+      "SPRING WORM, WORM · Jiayi Li, Audrey Chou, Enddle Jianhao Zheng",
+      "SYMBIOTIC REVERIE · Renner Yetong Xin, Crystal Yingbo Li, Rainee Yunyi Wang, Yilin Ye",
+      "Body Took · Am’Blance",
+      "Time Coils · LOREM",
+      "Elegy for a Terrestrial Collapse · Dan Gorelick, Yuj Archetype, Enddle Jianhao Zheng",
+      "CLAI · Interactive Items and Vasilii Miroliubov"
+    ],
+    "gallery": [
+      {
+        "video": "images/ex/gallery/01.mp4",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/02.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/03.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/04.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/05.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/06.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/07.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/08.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/09.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/010.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/011.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/012.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/013.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/014.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ex/gallery/015.jpg",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "video": "images/ex/gallery/016.mp4",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists and works",
+        "names": "Jiayi Li, Audrey Chou & Enddle Jianhao Zheng (SPRING WORM, WORM) · Renner Yetong Xin, Crystal Yingbo Li, Rainee Yunyi Wang & Yilin Ye (SYMBIOTIC REVERIE) · Am’Blance (Body Took) · LOREM (Time Coils) · Dan Gorelick, Yuj Archetype & Enddle Jianhao Zheng (Elegy for a Terrestrial Collapse) · Interactive Items & Vasilii Miroliubov (CLAI)"
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "title": "Reconfiguring Creativity",
+    "category": "curation",
+    "tag": "Talk",
+    "description": "A public panel on AI, ethics, and creative practice presented with Parsons School of Design.",
+    "slug": "reconfiguring-creativity",
+    "url": "https://event.newschool.edu/reconfiguringcreativity",
+    "image": "images/reconfig/cover.jpg",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "April 7, 2025 · Parsons School of Design, New York",
+    "role": "Co-Organizer",
+    "venue": "Parsons School of Design",
+    "date": "April 7, 2025",
+    "introduction": "Presented by Parsons School of Design and UAAD as part of the Design with AI course, this panel brought artists, designers, educators, and researchers into dialogue about how AI reshapes artistic practice and the ethical questions that follow.",
+    "program": [
+      "Presentations by participating artists and designers",
+      "Panel discussion with students, faculty, and the public"
+    ],
+    "gallery": [
+      {
+        "image": "images/reconfig/gallery/webp/01.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/02.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/03.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/04.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/05.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/06.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/07.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/reconfig/gallery/webp/08.webp",
+        "imageAlt": "Online Panel Screenshot",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Panelists",
+        "names": "Carrie Sijia Wang · Sutanuka Jashu · Alina Nazmeeva"
+      }
+    ]
+  },
+  {
+    "slug": "jukebox-of-dissonance",
+    "title": "Jukebox of Dissonance",
+    "year": "2024",
+    "category": "curation",
+    "tag": "Performance",
+    "description": "A two-day UAAD festival of live performance, virtual curation, artist talks, film, and workshops.",
+    "role": "Curatorial & Production Lead · Program Design · Visual Design · Marketing & PR",
+    "venue": "G Gallery, New York / virtual",
+    "date": "October 19–20, 2024",
+    "introduction": "Organized for UAAD’s second anniversary, Jukebox of Dissonance brought a virtual exhibition together with two days of live performances, artist talks, discussions, film, and a workshop in New York. Its varied formats invited artists and audiences to meet across disciplines and imagine new connections between art, technology, and collective practice.",
+    "program": [
+      "Oct 19 · Virtual exhibition opening",
+      "Oct 19 · Artist talks and panel discussion",
+      "Oct 19 · Evening new media performances",
+      "Oct 20 · Performances and short film screening",
+      "Oct 20 · Seed Mapping workshop by Oreades Press"
+    ],
+    "url": "https://www.uaad.art/festival",
+    "image": "images/jukebox/cover.webp",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "October 19–20, 2024 · G Gallery, New York / Virtual",
+    "gallery": [
+      {
+        "image": "images/jukebox/gallery/webp/02.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/03.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/04.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/05.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/06.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/07.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/08.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/09.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/010.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/011.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/012.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/013.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/014.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/015.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/016.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/018.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "video": "images/jukebox/gallery/019.mp4",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/020.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/022.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/023.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/024.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/jukebox/gallery/webp/025.webp",
+        "imageAlt": "Project preview photograph",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Exhibition artists",
+        "names": "A.J. Cincotta-Eichenfield, Alexandre Vianna, Alina Nazmeeva, Angie Lin Boyer, Camilo Salas, Caren Wenqing Ye & Shiqing Chen, Cecilia Villaverde, Deven Verma, Flâneuse du Mal, Hong Huo, Candice Wu, Juan Alvarez, Kevin Peter He, Ker Chen, SPLACES.STUDIO, Mu Tuan, Rachel TonThat & Victoria Cheredeeva, Schuyler Dragoo, Seitaro Yamazaki, Sutanuka Jashu, Tiffany Wei, and Vidmina Stasiulyte"
+      },
+      {
+        "heading": "Performers",
+        "names": "Yanran Bi · Yilia Zhan & Zhaonian Li · Yiou Wang & Xiaozhu Xia · Ker Chen & Daniel Mangosing · Whitt Sellers · Kevin Peter He · Summer Breeze · Caren Wenqing Ye, Shiqing Chen & Audrey Chou · Hong Huo & Mayu Nakaya"
+      },
+      {
+        "heading": "Film screening",
+        "names": "Cecilia Villaverde · Ker Chen · Splaces Studio · Sutanuka Jashu, Lorena Patricia Garcia Espino, Denise Ackerl, Rocío Palacin Rotbarg, Owen McAteer, Laura Hernández"
+      },
+      {
+        "heading": "Panelists",
+        "names": "Yiou Wang · Whitt Sellers · Wei Wu · Sutanuka Jashu · Schuyler Dragoo · Rachel TonThat"
+      }
+    ],
+    "tags": [
+      "Performance",
+      "Virtual Curation",
+      "Talk"
+    ]
+  },
+  {
+    "slug": "matrix-of-the-not-yet",
+    "title": "Matrix of the Not-Yet",
+    "year": "2024",
+    "category": "curation",
+    "tag": "Virtual Curation",
+    "description": "An interactive web-based curatorial project mapping possible worlds across social, technological, and ecological intersections.",
+    "role": "Curatorial & Production Lead · Editor · 3D Design · Marketing & PR",
+    "venue": "UAAD website",
+    "date": "June 15, 2024",
+    "introduction": "An interactive publication featuring 19 artist groups. Inspired by the rhizome, Matrix of the Not-Yet replaces a linear reading path with a decentralized network of visions for possible futures.",
+    "program": [
+      "Interactive web-based exhibition"
+    ],
+    "url": "",
+    "image": "images/matrix/cover.webp",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "June 15, 2024 · Online",
+    "gallery": [
+      {
+        "video": "images/matrix/gallery/01.mp4",
+        "imageAlt": "Trailer",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/matrix/gallery/02.webp",
+        "imageAlt": "3D map of the interactive website",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Adam Bialek, Amy Yoshitsu, Andy DiLallo, Ben Gasta, Cao Shu, Cezar Mocan, Dion Nataraja Ekaterina Golovko, Elena Aya Bundurakis, Huanzhe Hu, lbuki Kuramochi, Ke Peng, Luca Lee, Margaret Noble, Marina Orlova, Mu Tuan, Nic Pehkonen, Rahul Juneja, Yiou Wang, Zhou Zhou"
+      }
+    ]
+  },
+  {
+    "slug": "alt-alterity",
+    "title": "Alt-Alterity",
+    "year": "2023–",
+    "category": "curation",
+    "tag": "Virtual Curation",
+    "description": "A virtual exhibition featuring 26 artist groups from 13 countries, exploring alternative forms of identity and relation.",
+    "role": "Curatorial & Production Lead · 3D Design Lead · Visual Design · Marketing & PR",
+    "venue": "New Art City (virtual)",
+    "date": "Dec 16, 2023 – present",
+    "introduction": "In the midst of gathering storms — genocides, wars, forced displacements, global climate collapse, the ascendency of technocracy, alongside the unyielding presence of unjust ideologies such as sexism, racism, colonialism, imperialism, and capitalism — emerges our curatorial and editorial initiative, Alt-Alterity. It stands as an attempt to provoke a co-imagination of an alternative paradigm for how we, as humans, engage with both the “other” inhabitants of our planet and “each other” within our societies.",
+    "program": [
+      "Virtual exhibition"
+    ],
+    "url": "https://newart.city/show/alt-alterity-anchor",
+    "image": "images/alterity/cover.jpg",
+    "imageAlt": "Project preview photograph",
+    "photoCredit": "Dec 16, 2023 – present · New Art City (virtual)",
+    "gallery": [
+      {
+        "video": "images/alterity/gallery/1.mp4",
+        "imageAlt": "Trailer",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/01.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/02.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/03.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/04.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/05.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/06.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/07.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/08.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/09.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/010.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/011.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/012.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/013.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/alterity/gallery/webp/014.webp",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Aiping Xu, A.J. Cincotta-Eichenfield, Angela M Link, Bobby Zhaocheng Xiong, Chia-Hua Lee, Christie Lau, Elizabeth Russ and Michael Donnelly, Fatima Al-Kuwari, Flavia Mazzanti, Ishraki Kazi, Joshua Carlos Barrera, Krithi Nalla, Ludovica Galleani d'Aglian, Meiyi Jiang and Xiaoting Tan, Mehrdad Sedaghat-Baghbani, Mingyong Cheng, Mo Nan, Shashwath Santosh, Symonne Liu, Tiange Wang and I-Yang Huang, Tianyun Jiang, Xinyuan Ma, Yimei Zheng, Yu Chen, Yuwen Huang, Yuqing Liang, Zhijun Song and Yalin Hu"
+      }
+    ]
+  },
+  {
+    "slug": "ties-that-cannot-be-unbound",
+    "title": "Ties That Cannot Be Unbound",
+    "year": "2023–",
+    "category": "curation",
+    "tag": "Virtual Curation",
+    "description": "A virtual exhibition reconsidering our relationships with living and non-living entities.",
+    "role": "Curatorial & Production Lead · Marketing & PR",
+    "venue": "New Art City (virtual)",
+    "date": "March 23, 2023 – present",
+    "introduction": "Our lives are shaped by the ties that bind us to the world around us. These ties weave networks of relationships that make up our narratives and help us navigate the complexities of our planet. UAAD invites you to explore these connections with Ties That Cannot Be Unbound, an online exhibition that discusses the interconnectedness of spirituality and physicality, the blurred boundaries between the living and the non-living, and the ties between our bodies and the environment. Featuring outstanding works in sound, image, film, and interaction, this exhibition responds to the question: what kinds of ties are impossible to unbind? Join us on a journey of self-discovery and collective action towards a more sustainable and harmonious future.",
+    "program": [
+      "Virtual exhibition"
+    ],
+    "url": "https://newart.city/show/TTCBU",
+    "image": "images/ties/cover.jpg",
+    "imageAlt": "Virtual Exhibition Screenshot",
+    "photoCredit": "March 23, 2023 – present · New Art City (virtual)",
+    "gallery": [
+      {
+        "video": "images/ties/gallery/01.mov",
+        "imageAlt": "Trailer",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/02.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/03.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/04.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/05.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/06.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/07.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/08.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      },
+      {
+        "image": "images/ties/gallery/09.jpg",
+        "imageAlt": "Virtual Exhibition Screenshot",
+        "photoCredit": ""
+      }
+    ],
+    "participants": [
+      {
+        "heading": "Artists",
+        "names": "Alina Tofan, Daecheon Kim, Flavia Mazzanti, llianaSun, lshraki Kazi, Julie Sperling, Ke Peng and YueshenWu, Lyndsey Walsh, Nina Sumarac, Reza Sedghi, SueKiYee, Van O, wei wu, Xinyi wu, Yilin Zhang, Youju Kang,Ziv Epstein, Zhao Jiajing, Zheyuan Zhang"
+      }
+    ]
+  }
+]
